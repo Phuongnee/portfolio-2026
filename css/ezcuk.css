@@ -63,7 +63,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 /* ===========================
      3. LAYOUT GLOBAL
      =========================== */
@@ -87,6 +86,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 
 .content {
   width: 100%;
@@ -649,25 +649,28 @@ p a:hover {
     padding: 0;
     box-sizing: border-box;
     overflow: auto;
-    cursor: pointer;
+    cursor: pointmethodologyer;
   }
   .header h1 {
     width: 100%;
     max-width: 250px;
+    font-size: 32px;
   }
   .container {
     margin: 50px 0;
   }
   .content {
-    padding: 50px 20px;
+    padding: 20px 20px;
+    max-width: 400px;
   }
   .text-section {
-    padding: 20px 20px;
     width: 100%;
-    max-width: 700px;
+    max-width: 400px;
+    padding: 20px 0px;
+
   }
   .text-section h1 {
-    font-size: 36px;
+    font-size: 32px;
   }
   .text-section h3 {
     font-size: 24px;
@@ -705,6 +708,8 @@ p a:hover {
     flex-direction: column;
     gap: 20px;
     align-items: center;
+    justify-content: center;
+    padding: 20px 0;
   }
   .introduction img,
   .competitive-analysis img,
@@ -721,7 +726,7 @@ p a:hover {
   .wireframes img,
   .high-fidelity-mockups img {
     width: 100%;
-    max-width: 400px;
+    max-width: 380px;
   }
   .interactive-prototype iframe {
     width: 100%;
@@ -733,7 +738,7 @@ p a:hover {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
-    padding: 20px;
+    padding: 20px 15px;
   }
 
   .step-1,
@@ -762,12 +767,13 @@ p a:hover {
   .text-header,
   .text,
   .problem-statement p {
-    padding: 20px 20px;
+    padding: 20px 0px;
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
+    
   }
   .text-header h1 {
-    font-size: 36px;
+    font-size: 32px;
   }
   .intro-text p {
     font-size: 16px;
@@ -780,16 +786,38 @@ p a:hover {
     align-items: flex-start;
     text-align: left;
     width: 100%;
-    max-width: 400px;
+    max-width: 380px;
   }
+  .research ul,
   .key-takeaways ul,
   .finding-1 ul,
   .finding-2 ul,
   .finding-3 ul {
     width: 100%;
     max-width: 400px;
-    padding: 0 20px;
+    padding: 0;
+    list-style-type: none;
   }
+  .key-takeaways,
+  .problem-statement,
+  .high-fidelity-mockups {
+    margin: 0;
+    padding: 20px 0;
+    max-width: 430px;
+  }
+
+  .problem-statement p {
+    max-width: 380px;
+  }
+
+  .survey-methodology {
+    flex-direction: column;   /* empile verticalement */
+    gap: 20px;
+    padding: 20px 16px;       /* réduit le padding */
+    width: 100%;
+    max-width: 100%;
+  }
+}
   .interview-insights {
     display: flex;
     flex-direction: column;
@@ -821,4 +849,9 @@ p a:hover {
     font-size: 20px;
     padding: 8px 20px;
   }
-}
+
+  .empathiese-stage {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
