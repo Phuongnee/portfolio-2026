@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <link rel="stylesheet" href="./css/about.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="nav-menu">
+      <div id="header-text">
+        <h1 id="closeBtn">(click to explore)</h1>
+      </div>
+      <!-- === HAMBURGER ICON (visible on mobile) === -->
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <!-- === MOBILE MENU (hidden on desktop) === -->
+      <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-menu__list">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./projet.html">Projects</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="mailto:nthuphuong13111998@gmail.com">Contact</a></li>
+        </ul>
+      </div>
+      <!-- Desktop Menu -->
+      <div>
+        <div class="menu__wrap">
+          <ul class="menu__inner menu-home">
+            <li class="menu__item menu-hover">
+              <a
+                data-splitting
+                data-menu="home"
+                href="./index.html"
+                class="menu__link"
+              >
+                <span class="menu__link-span">Home</span>
+              </a>
+            </li>
+
+            <li class="menu__item menu-hover">
+              <a
+                data-splitting
+                data-menu="project"
+                href="./projet.html"
+                class="menu__link"
+              >
+                <span class="menu__link-span">Projects</span>
+              </a>
+            </li>
+            <li class="menu__item menu-hover">
+              <a
+                data-splitting
+                data-menu="about"
+                href="./about.html"
+                class="menu__link"
+              >
+                <span class="menu__link-span">About</span>
+              </a>
+            </li>
+            <li class="menu__item menu-hover">
+              <a
+                data-splitting
+                data-menu="contact"
+                href="mailto:nthuphuong13111998@gmail.com"
+                class="menu__link"
+              >
+                <span class="menu__link-span">Contact</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="bottom-section">
+        <div class="about-me">
+          <div class="content">
+            <p class="intro">
+              Hello, I’m
+              <button id="nameBtn" class="as-link" type="button">
+                Phuong Nguyen
+              </button>
+              <span id="text1" class="hidden">
+                , a UI/UX designer with a background in web and front-end
+                <button id="devBtn" class="as-link" type="button">
+                  development</button
+                >.
+              </span>
+              <span id="text2" class="hidden">
+                <span id="workLink" class="work-link">My work</span> merges
+                design, usability, and strategy to create digital experiences
+                that
+                <button id="connectBtn" class="as-link" type="button">
+                  connect
+                </button>
+                with people.
+              </span>
+              <span id="text3" class="hidden">
+                Passionate about web design, branding, and mobile applications,
+                I
+                <button id="focusBtn" class="as-link" type="button">
+                  focus on
+                </button>
+                transforming ideas into impactful, user-centered solutions.
+              </span>
+              <span id="text4" class="hidden">
+                I
+                <button id="grewBtn" class="as-link" type="button">
+                  grew up
+                </button>
+                with a strong
+                <button id="curiBtn" class="as-link" type="button">
+                  curiosity
+                </button>
+                for how things work and how they can be improved.
+              </span>
+              <span id="text5" class="hidden">
+                My first steps were in web and front-end development, where I
+                quickly realized
+                <button id="thatBtn" class="as-link" type="button">that</button>
+                what truly fascinated me was not only building but shaping
+                meaningful digital experiences.
+              </span>
+              <span id="text7" class="hidden">
+                That curiosity led me to transition fully into design, where
+                creativity and functionality meet.
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-section-divider">
+        <div class="divider">
+          <h1 class="custom-font">About</h1>
+        </div>
+        <div class="photo-section">
+          <img
+            src="https://res.cloudinary.com/da9k32mdb/image/upload/v1747577477/me.png"
+            alt="About Me Photo"
+          />
+          <!-- <div class="resume-download">
+            <a href="./documents/Phuong_Nguyen_Resume.pdf" download>
+              <button class="download-btn">Download Resume</button>
+            </a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <div class="bottom-header">
+      <div class="bloquereloj">
+        <h4 class="clock" style="color: #141414">
+          <span class="highlight-text">Paris · Europe</span>
+        </h4>
+        <div id="MyClockDisplay" class="clock">SATURDAY 12:44:00 AM</div>
+      </div>
+      <div class="resume-text">
+        <p>
+          <a href="./pdf/CV-Phuong Nguyen.pdf"
+            ><span
+              class="highlight-text"
+              style="
+                text-decoration: underline;
+                text-underline-offset: 3px;
+                text-decoration-thickness: 1.5px;
+              "
+              >Download Resume</span
+            ></a
+          >
+        </p>
+        <p>nthuphuong13111998@gmail.com</p>
+      </div>
+    </div>
+    <button
+      id="themeToggle"
+      class="theme-toggle"
+      type="button"
+      role="switch"
+      aria-checked="false"
+      aria-label="Toggle dark mode"
+    >
+      <span class="theme-toggle__thumb" aria-hidden="true"></span>
+    </button>
+
+    <script>
+      const nameBtn = document.getElementById("nameBtn");
+      const devBtn = document.getElementById("devBtn");
+      const connectBtn = document.getElementById("connectBtn");
+      const focusBtn = document.getElementById("focusBtn");
+      const grewBtn = document.getElementById("grewBtn");
+      const thatBtn = document.getElementById("thatBtn");
+      const text1 = document.getElementById("text1");
+      const text2 = document.getElementById("text2");
+      const text3 = document.getElementById("text3");
+      const text4 = document.getElementById("text4");
+      const text5 = document.getElementById("text5");
+      const text6 = document.getElementById("text6");
+      const text7 = document.getElementById("text7");
+      const workLink = document.getElementById("workLink");
+      const menuToggle = document.querySelector(".menu-toggle");
+      const mobileMenu = document.querySelector("#mobileMenu");
+
+      // === MENU MOBILE ===
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener("click", () => {
+          menuToggle.classList.toggle("active");
+          mobileMenu.classList.toggle("open");
+          document.body.classList.toggle("no-scroll");
+        });
+      }
+
+      // Clique sur "Phuong Nguyen"
+      nameBtn.addEventListener("click", () => {
+        text1.classList.toggle("hidden");
+        nameBtn.classList.add("clicked");
+      });
+
+      // Clique sur "development"
+      devBtn.addEventListener("click", () => {
+        text2.classList.toggle("hidden");
+        devBtn.classList.add("clicked");
+      });
+
+      // Clique sur "connect"
+      connectBtn.addEventListener("click", () => {
+        text3.classList.toggle("hidden");
+        connectBtn.classList.add("clicked");
+      });
+      // Clique sur "focus on"
+      focusBtn.addEventListener("click", () => {
+        text5.classList.toggle("hidden");
+        focusBtn.classList.add("clicked");
+      });
+      // Clique sur "grew up"
+      grewBtn.addEventListener("click", () => {
+        text6.classList.toggle("hidden");
+        grewBtn.classList.add("clicked");
+      });
+      // Clique sur "curiosity"
+      thatBtn.addEventListener("click", () => {
+        text7.classList.toggle("hidden");
+        curiBtn.classList.add("clicked");
+      });
+      // Clique sur "My work" → ouvre dans un nouvel onglet
+      workLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.open("./projet.html", "_blank");
+      });
+
+      // === HORLOGE "PARIS" ===
+      function showTime() {
+        const dayName = [
+          "SUNDAY",
+          "MONDAY",
+          "TUESDAY",
+          "WEDNESDAY",
+          "THURSDAY",
+          "FRIDAY",
+          "SATURDAY",
+        ];
+
+        const parisTime = new Date().toLocaleString("en-US", {
+          timeZone: "Europe/Paris",
+        });
+        const date = new Date(parisTime);
+
+        const day = dayName[date.getDay()];
+        let h = date.getHours();
+        let m = date.getMinutes();
+        let s = date.getSeconds();
+        let session = "AM";
+
+        if (h === 0) h = 12;
+        if (h >= 12) {
+          session = h === 12 ? "PM" : "PM";
+          if (h > 12) h -= 12;
+        }
+
+        h = h < 10 ? "0" + h : h;
+        m = m < 10 ? "0" + m : m;
+        s = s < 10 ? "0" + s : s;
+
+        const clockDisplay = document.getElementById("MyClockDisplay");
+        if (clockDisplay)
+          clockDisplay.textContent = `${day} ${h}:${m}:${s} ${session}`;
+
+        setTimeout(showTime, 1000);
+      }
+      showTime();
+
+      // Récupère l'URL actuelle (nom du fichier)
+      const url = new URL(window.location.href);
+      let current = url.pathname.split("/").pop();
+      if (!current || current === "/") current = "index.html"; // racine -> index.html
+
+      // Helper: normaliser un href (resolu selon la page courante)
+      const normalizeHref = (a) => {
+        const abs = new URL(a.getAttribute("href"), window.location.href);
+        let file = abs.pathname.split("/").pop();
+        if (!file || file === "/") file = "index.html";
+        return file;
+      };
+
+      // Desktop
+      document.querySelectorAll(".menu__link").forEach((link) => {
+        if (normalizeHref(link) === current) {
+          link.classList.add("active");
+          link.setAttribute("aria-current", "page");
+        }
+      });
+
+      (() => {
+        const STORAGE_KEY = "theme";
+        const root = document.documentElement;
+
+        // Theme already applied in <head>, but keep this as a fallback:
+        root.dataset.theme =
+          localStorage.getItem(STORAGE_KEY) || root.dataset.theme || "light";
+
+        const btn = document.getElementById("themeToggle");
+        if (!btn) return;
+
+        const sync = () =>
+          btn.setAttribute(
+            "aria-checked",
+            String(root.dataset.theme === "dark")
+          );
+        sync();
+
+        btn.addEventListener("click", () => {
+          const next = root.dataset.theme === "dark" ? "light" : "dark";
+          root.dataset.theme = next;
+          localStorage.setItem(STORAGE_KEY, next); // ✅ this makes it persist to other pages
+          sync();
+        });
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,728 @@
+@font-face {
+  font-family: "RobertBold";
+  src: url("../font/roobert-font-family-1739094187-0/RoobertTRIAL-SemiBold-BF67243fd54213d.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobertLight";
+  src: url("../font/roobert-font-family-1739094187-0/RoobertMonoTRIAL-Light-BF67243fd27eae5.otf")
+    format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RoxboroughCF";
+  src: url("../font/Rox/Roxborough\ CF.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Review";
+  src: url("../font/review-font-family-1762405635-0/Review-Bold-Trial-BF63f6d0f63e8c8.otf")
+    format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ReviewMedium";
+  src: url(../font/review-font-family-1762405635-0/Review-Medium-Trial-BF63f6d1052cbb4.otf)
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ReviewLight";
+  src: url(../font/review-font-family-1762405635-0/Review-Light-Trial-BF63f6d1043a304.otf)
+    format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-light: #f6f5ee;
+  --color-grey-light: #cecece;
+  --color-grey-dark: #8e8e8e;
+  --color-dark: #141414;
+  --color-primary: #383838;
+  --color-background: var(--color-light);
+  --color-text: var(--color-dark);
+  --color-text-link: var(--color-dark);
+  --color-text-link-hover: var(--color-dark);
+  --color-error: #c34d36;
+}
+/* Dark theme override */
+html[data-theme="dark"] {
+  --color-background: #141414; /* your --color-dark */
+  --color-text: #f6f5ee; /* your --color-light */
+  --color-text-link: #f6f5ee;
+  --color-text-link-hover: #cecece;
+
+  /* optional helpers for UI */
+  --toggle-border: rgba(246, 245, 238, 0.25);
+  --toggle-thumb: #f6f5ee;
+}
+
+/* optional helpers for light mode UI */
+:root {
+  --toggle-border: rgba(20, 20, 20, 0.25);
+  --toggle-thumb: #141414;
+}
+.loading-container h1 {
+  color: var(--color-text);
+}
+.title__wrap {
+  color: var(--color-text);
+}
+.menu__link {
+  color: var(--color-text);
+}
+.menu-toggle .bar {
+  background-color: var(--color-text);
+}
+.bloquereloj {
+  color: var(--color-text);
+}
+.resume-text a {
+  color: var(--color-text);
+}
+.project-card {
+  color: var(--color-text);
+}
+.project-card span {
+  color: var(--color-grey-dark);
+}
+.project-card:hover .sub-title::after {
+  color: var(--color-grey-light)!important;
+}
+.title__wrap p,
+.project-card p {
+  color: var(--color-text);
+}
+.menu-toggle,
+.bloquereloj h4, .bloquereloj .clock{
+  color: var(--color-text);
+}
+.menu-toggle .bar {
+  background-color: var(--color-text) !important;
+}
+.mobile-menu__list a, .menu__link-span, .resume-text a {
+  color: var(--color-text) !important;
+}
+
+
+html.no-scroll,
+body.no-scroll {
+  overflow: hidden !important;
+  height: 100vh;
+  touch-action: none;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--color-background);
+  color: var(--color-text); /* <- change from var(--color-dark) */
+  overflow: hidden;
+  overflow-y: auto !important;
+}
+.theme-toggle {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  z-index: 9999;
+
+  width: 62px;
+  height: 32px;
+  padding: 3px;
+
+  border-radius: 999px;
+  background: transparent;
+  border: 2px solid var(--toggle-border);
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+}
+
+.theme-toggle__thumb {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background: var(--toggle-thumb);
+  transform: translateX(0);
+  transition: transform 0.25s ease;
+}
+
+html[data-theme="dark"] .theme-toggle__thumb {
+  transform: translateX(30px);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 3px;
+}
+
+/* SECTION LOADING - CENTRÉE PARFAITEMENT */
+#loading-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--color-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Toujours au-dessus du reste */
+}
+
+/* TEXTE DE CHARGEMENT - CENTRÉ DANS LE CONTAINER */
+.loading-container {
+  position: fixed;
+  inset: 0;
+  background: var(--color-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.4s ease;
+  font-size: 12px;
+  color: #383838;
+  font-family: "RobertLight", sans-serif;
+  font-weight: 350;
+  letter-spacing: -0.05em;
+  line-height: 1.2;
+  font-style: italic;
+}
+.dot-animation::after {
+  content: "";
+  animation: dots 1.2s steps(4, end) infinite;
+}
+
+@keyframes dots {
+  0%,
+  20% {
+    content: "";
+  }
+  40% {
+    content: ".";
+  }
+  60% {
+    content: "..";
+  }
+  80%,
+  100% {
+    content: "...";
+  }
+}
+
+/* FADE OUT ANIMATION */
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* HEADER CONTAINER */
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  justify-content: space-between;
+  position: relative;
+  padding: 0;
+}
+
+/* TITLE CONTAINER */
+.title-container {
+  /* dùng [hidden] để ẩn lúc load, JS sẽ gỡ */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+/* TITLE */
+.custom-title {
+  font-weight: 200;
+  font-size: 4rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--color-text);
+}
+.custom-title a {
+  text-decoration: none;
+  color: inherit;
+}
+.custom-font {
+  font-family: "Review", sans-serif; /* Use the custom font */
+}
+
+/* từ để animate */
+.word {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(6px);
+  will-change: transform, letter-spacing, opacity, filter;
+}
+
+/* DESCRIPTION */
+.title__wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0 100px;
+  box-sizing: border-box;
+  font-family: "RobertLight", sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 1.2;
+  color: var(--color-dark);
+  letter-spacing: -0.02em;
+  gap: 10px;
+}
+
+.title__wrap--left {
+  align-items: flex-start;
+  text-align: left;
+  box-sizing: border-box;
+  padding-left: 50px;
+}
+.title__wrap--left p:nth-of-type(2) {
+  padding-left: 29.3vw;
+}
+.title__wrap--left p:nth-of-type(3) {
+  padding-left: 48vw;
+}
+.highlight-text {
+  font-family: "ReviewMedium", serif;
+}
+
+/* MENU CONTAINER */
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--color-background);
+  z-index: 1000;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+  display: none; /* Hidden on desktop */
+}
+
+/* Navigation Menu */
+/* MENU */
+#nav-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  z-index: 1000;
+  padding: 20px;
+  margin: 0;
+  border-bottom: dotted 1px var(--color-grey-dark);
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease-in-out, background 0.3s ease-in-out;
+  background: transparent;
+}
+
+.menu__wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.menu__inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem; /* spacing between items */
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+/* MENU LINKS */
+.menu__link {
+  position: relative;
+  display: inline-block;
+  color: var(--color-dark);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  font-family: "ReviewLight", serif;
+  transition: color 0.3s ease;
+  letter-spacing: -0.01em;
+}
+
+.menu__link:hover {
+  color: #666;
+  transition: color 0.3s ease;
+}
+.menu__link.active {
+  font-weight: 700; /* ou bold */
+  position: relative;
+  font-family: "ReviewMedium", serif;
+}
+/* === HAMBURGER ICON === */
+.menu-toggle {
+  display: none; /* caché sur desktop */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1101;
+  position: absolute;
+  right: 30px;
+}
+
+.menu-toggle .bar {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-dark);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* animation burger -> croix */
+.menu-toggle.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* === MOBILE MENU === */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--color-background);
+  z-index: 1100;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-menu.open {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-menu__list {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0;
+}
+
+.mobile-menu__list a {
+  text-decoration: none;
+  font-family: "ReviewMedium", serif;
+  color: var(--color-dark);
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu__list a:hover {
+  color: var(--color-grey-dark);
+}
+
+/* Fixed Clock Box - Left Side */
+.bloquereloj {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  z-index: 9999;
+  text-align: left;
+  font-family: "RobertLight", sans-serif;
+  color: var(--color-dark);
+  transition: all 0.3s ease-in-out;
+}
+
+.clock {
+  font-size: 15px;
+  margin: 0.2rem 0;
+}
+.resume-text {
+  display: flex;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 5px;
+  font-family: "RobertLight", sans-serif;
+  font-size: 15px;
+  font-weight: 200;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.resume-text a {
+  text-decoration: none;
+  color: var(--color-dark);
+  font-weight: 400;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* === Projects Carousel === */
+.projects-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: transparent;
+  padding: 2rem 0;
+  white-space: nowrap;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 2rem;
+  animation: scroll 15s linear infinite; /* ✅ plus rapide (avant 30s) */
+  will-change: transform;
+}
+
+.project-card {
+  flex: 0 0 auto;
+  width: 380px;
+  height: 300px;
+  text-align: center;
+  color: #1c1c1c;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card p {
+  font-weight: 600;
+  margin: 0.8rem 0 0.3rem;
+  font-family: "ReviewMedium", serif;
+  font-size: 15px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.project-card span {
+  font-size: 0.9rem;
+  font-family: "RobertLight", sans-serif;
+  color: #666;
+}
+/* ✅ Hover effect for grayscale “focus” */
+.projects-carousel:hover .project-card {
+  filter: grayscale(100%) brightness(0.8);
+  opacity: 0.6;
+  transform: scale(0.98);
+}
+
+.projects-carousel .project-card:hover {
+  filter: grayscale(0%) brightness(1);
+  opacity: 1;
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+/* Optional scrollbar styling */
+.projects-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+.projects-carousel::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+.projects-carousel::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+/* ✅ Animation infinie et fluide */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%); /* défile la moitié, le reste est une copie */
+  }
+}
+.title-subtitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+.sub-title {
+  position: relative;
+  display: inline-block;
+  transition: opacity 0.3s ease;
+  font-family: "RobertLight", sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.05em;
+}
+
+/* On hover, hide the original text */
+.project-card:hover .sub-title {
+  color: transparent; /* make text invisible */
+}
+
+/* Add "View Project" using ::after pseudo-element */
+.project-card:hover .sub-title::after {
+  content: "View Project";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #000; /* or any color you like */
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .custom-title {
+    font-size: 2.5rem;
+    padding: 0;
+  }
+
+  .title__wrap {
+    padding: 40px 20px;
+    font-size: 14px;
+  }
+
+  .title__wrap--left p:nth-of-type(2),
+  .title__wrap--left p:nth-of-type(3) {
+    padding-left: 0;
+  }
+
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+  .menu-toggle {
+    display: flex; /* visible sur mobile */
+  }
+  /* ==== Projects Section ==== */
+  .projects-carousel {
+    overflow: visible; /* no scrollbars at all */
+    height: auto;
+    padding: 2rem 1rem;
+    white-space: normal; /* ✅ allow wrapping like normal block elements */
+    background: transparent;
+  }
+
+  .carousel-track {
+    display: flex;
+    flex-direction: column; /* ✅ stack vertically */
+    align-items: center;
+    gap: 2rem;
+    animation: none !important; /* 🚫 disable carousel animation */
+    transform: none !important;
+    will-change: auto;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    text-align: center;
+    transform: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+    transition: none !important;
+    cursor: default;
+  }
+
+  .project-card img {
+    width: 350px;
+    height: 250px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: none;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* remove hover styles */
+  .projects-carousel:hover .project-card,
+  .project-card:hover {
+    filter: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* adjust text size for mobile */
+  .project-card p {
+    font-size: 1rem;
+  }
+  .title-subtitle {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .project-card .sub-title {
+    font-size: 0.9rem;
+  }
+  .bloquereloj {
+    position: static !important; /* remove absolute positioning */
+    order: 2; /* ensure it comes after the title-container in flex layouts */
+    margin-top: 15px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+  .resume-text {
+    display: none;
+  }
+}

@@ -1,0 +1,619 @@
+@font-face {
+  font-family: "Review";
+  src: url("../font/review-font-family-1762405635-0/Review-Bold-Trial-BF63f6d0f63e8c8.otf")
+    format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ReviewMedium";
+  src: url("../font/review-font-family-1762405635-0/Review-Medium-Trial-BF63f6d1052cbb4.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ReviewLight";
+  src: url("../font/review-font-family-1762405635-0/Review-Light-Trial-BF63f6d1043a304.otf")
+    format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RoxboroughCF";
+  src: url("../font/Rox/Roxborough CF.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobertLight";
+  src: url("../font/roobert-font-family-1739094187-0/RoobertMonoTRIAL-Light-BF67243fd27eae5.otf")
+    format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+:root {
+  --bg: #0f0f10;
+  --panel: rgba(255, 255, 255, 0.04);
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(0, 0, 0, 0.75);
+
+  /* pill colors */
+  --pill: #88c290; /* lilac */
+  --pillActive: #f2f193; /* soft yellow */
+  --pillText: #2f2447; /* dark purple */
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: radial-gradient(
+      70% 70% at 50% 0%,
+      rgba(255, 255, 255, 0.06),
+      transparent 55%
+    ),
+    var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+#nav-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+  z-index: 1000;
+  padding: 20px;
+  margin: 0;
+  border-bottom: dotted 1px var(--text);
+}
+
+.btn-close {
+  font-family: "RobertLight", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--color-dark);
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.container {
+  width: 100%;
+  margin: 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  width: 100%;
+  padding: 100px 0;
+}
+.header {
+  font-family: "ReviewMedium", serif;
+  font-size: 24px;
+  font-weight: normal;
+  color: var(--color-dark);
+  text-decoration: none;
+  margin: 40px;
+}
+.project-collab li {
+  font-family: "ReviewLight", serif;
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--pillActive);
+  font-style: italic;
+}
+.about-project,
+.user-flow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+  width: 100%;
+}
+.introduction {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.intro-text {
+  width: 50%;
+}
+.intro-text h1,
+.problem-statement h1,
+.process-intro h1,
+.audience-intro h1,
+.user-flow-intro h1,
+.wireframes-intro h1,
+.design-system-intro h1,
+.ui-results-intro h1 {
+  font-family: "RoxboroughCF", serif;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 2px;
+  color: var(--pillActive);
+  margin-top: 0;
+  font-size: 32px;
+  line-height: 1.2;
+}
+.intro-text p,
+.problem-statement p,
+.process-intro p,
+.image-section-process p,
+.audience-intro p {
+  font-size: 16px;
+  font-family: "ReviewLight", serif;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.85);
+}
+.problem-statement {
+  width: 50%;
+}
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-section img,
+.image-section-user-flow img,
+.image-section-wireframes img,
+.image-section-design-system img,
+.image-section-ui-results img {
+  width: 100%;
+  max-width: 1500px;
+  height: auto;
+  padding: 60px 0;
+}
+.image-section-ui-results {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.image-section-ui-results img {
+  max-width: 1000px;
+}
+.group-1 {
+  display: flex;
+  flex-direction: row;
+}
+#design-process,
+.audience-intro,
+#user-flow,
+#wireframes,
+#design-system,
+#ui-results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 40px;
+}
+
+.ui-final {
+  display: flex;
+  justify-content: center;
+  background-color: #f2f193;
+  padding: 60px 40px;
+}
+.ui-final img {
+  max-width: 1000px;
+}
+.image-section-process {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-section-process img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  padding: 40px 0;
+}
+
+.page {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 28px 18px 40px;
+}
+
+/* Pills */
+.pill-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 16px;
+  background: var(--panel);
+  backdrop-filter: blur(8px);
+
+  position: sticky; /* reste visible */
+  top: 16px; /* distance du haut */
+  z-index: 10;
+}
+.pill {
+  border: 0;
+  cursor: pointer;
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: var(--pill);
+  color: var(--pillText);
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28);
+  transition: transform 0.12s ease, filter 0.12s ease, background 0.12s ease;
+}
+
+.pill:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.02);
+}
+.pill:active {
+  transform: translateY(0px);
+}
+.pill.is-active {
+  background: var(--pillActive);
+}
+
+.pill:focus-visible {
+  outline: 2px solid rgba(242, 241, 147, 0.85);
+  outline-offset: 3px;
+}
+
+/* Cards row */
+.process-cards {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.card {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 18px;
+  padding: 16px 16px 18px;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.35);
+  height: 200px;
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  font-weight: 900;
+}
+
+.card ul {
+  margin: 0;
+  padding-left: 16px;
+  line-height: 1.35;
+  font-size: 12px;
+}
+
+/* Card colors */
+.card-yellow {
+  background: #f2f193;
+  color: var(--muted);
+}
+.card-lilac {
+  background: #d7c3f7;
+  color: var(--muted);
+}
+.card-orange {
+  background: #ea6a46;
+  color: rgba(0, 0, 0, 0.78);
+}
+.card-white {
+  background: #f4f4f4;
+  color: rgba(0, 0, 0, 0.78);
+}
+
+/* Audience intro text */
+.audience {
+  margin-top: 18px;
+}
+
+.audience-lead {
+  max-width: 980px;
+  margin: 18px 0 22px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.audience-title {
+  margin: 0 0 14px;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* Cards layout */
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* Card base */
+.insight-card {
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  min-height: 320px;
+}
+
+/* Card colors */
+.card-lilac {
+  background: #d7c3f7;
+  color: rgba(0, 0, 0, 0.78);
+}
+.card-yellow {
+  background: #f2f193;
+  color: rgba(0, 0, 0, 0.78);
+}
+
+/* Card header */
+.insight-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.insight-name {
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.insight-meta {
+  margin: 6px 0 0;
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+/* Avatar circle */
+.insight-avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 2px solid rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* Body */
+.insight-body p {
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.insight-body ul {
+  margin: 0 0 12px;
+  padding-left: 18px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.insight-sub {
+  margin-top: 10px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 11px;
+  opacity: 0.9;
+}
+.user-stories {
+  margin-top: 22px;
+}
+
+.user-stories-lead {
+  max-width: 980px;
+  margin: 18px 0 14px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.user-stories-title {
+  margin: 0 0 14px;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* grid */
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* card */
+.story-card {
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  min-height: 320px;
+}
+
+.story-header {
+  margin-bottom: 12px;
+}
+
+.story-role {
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.story-subtitle {
+  margin: 6px 0 0;
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.story-list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.story-list li {
+  margin-bottom: 10px;
+}
+
+/* colors */
+.card-lilac {
+  background: #d7c3f7;
+  color: rgba(0, 0, 0, 0.78);
+}
+.card-yellow {
+  background: #f2f193;
+  color: rgba(0, 0, 0, 0.78);
+}
+.card-orange {
+  background: #ea6a46;
+  color: rgba(0, 0, 0, 0.78);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  html {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: auto;
+    cursor: pointer;
+  }
+  .header h1 {
+    width: 100%;
+    max-width: 250px;
+    font-size: 32px;
+  }
+  .container {
+    margin: 50px 0;
+  }
+  .content {
+    padding: 50px 20px;
+  }
+  .project-collab {
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+  }
+  .pill-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+  }
+  .text-section {
+    width: 100%;
+    max-width: 400px;
+
+  }
+  .text-section h1 {
+    font-size: 28px;
+  } 
+  .text-section h3 {
+    font-size: 24px;
+  }
+  
+  .text-section p, .image-section-process p {
+    font-size: 16px;
+  }
+  .introduction {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .page {
+    max-width: 400px;
+  }
+  #about-project, #design-process, #audience, #user-flow, #wireframes, #design-system, #ui-results {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+  }
+  .ui-final {
+    padding: 40px 20px;
+  }
+  .process-cards, .image-section-process {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+  .image-section, .image-section-process {
+    display: flex;
+    justify-content: center;
+  }
+  .image-section img, .image-section-process img, .image-section-user-flow img, .image-section-wireframes img, .image-section-design-system img, .image-section-ui-results img, .ui-final img {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px 0;
+  }
+  .insights-grid, .stories-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+  }
+  .insight-card, .story-card {
+    width: 100%;
+    max-width: 400px;
+    min-height: 300px;
+  }
+}
+

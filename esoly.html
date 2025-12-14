@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esoly</title>
+    <link rel="stylesheet" href="./css/esoly.css" />
+  </head>
+  <body>
+    <div id="nav-menu">
+      <button class="btn-close">(close)</button>
+    </div>
+    <div class="container">
+      <div class="header">
+        <h1>
+          <span class="custom-title">UI Case Study</span>
+        </h1>
+        <ul class="project-collab">
+          <li>Phuong Nguyen - UI Designer</li>
+          <li>Justin Qu - Graphic Designer</li>
+        </ul>
+      </div>
+
+      <div class="page">
+        <!-- Pills / Tabs -->
+        <nav class="pill-nav" aria-label="Sections">
+          <a class="pill" href="#about-project">ABOUT PROJECT</a>
+          <a class="pill" href="#design-process">DESIGN PROCESS</a>
+          <a class="pill" href="#audience">AUDIENCE</a>
+          <a class="pill" href="#user-stories">USER STORIES</a>
+          <a class="pill" href="#user-flow">USER FLOW</a>
+          <a class="pill" href="#wireframes">WIREFRAMES</a>
+          <a class="pill" href="#design-system">DESIGN SYSTEM</a>
+          <a class="pill" href="#ui-results">UI DESIGN & RESULTS</a>
+        </nav>
+
+        <section id="about-project" class="about-project section">
+          <div class="text-section introduction">
+            <div class="text-section intro-text">
+              <h1>Overview</h1>
+              <p>
+                ESOLY is a mobile app concept inspired by the documentary "Et si
+                on levait les yeux ?" Une classe face aux écrans (Gilles
+                Vernet).
+                <span style="color: #88c290"
+                  >The app addresses excessive screen time among children and
+                  its impact on well-being and family connection.</span
+                >
+                ESOLY encourages healthier habits through a playful garden
+                simulation where progress is tied to time spent away from
+                screens.
+              </p>
+            </div>
+            <div class="text-section problem-statement">
+              <h1>The problem</h1>
+              <p>
+                Children (especially “Generation Alpha”) are
+                <span style="color: #88c290"
+                  >surrounded by screens and often use them by default</span
+                >
+                when alternative activities or parental availability are
+                limited. The documentary also highlights that parents’ own
+                screen habits can weaken family connection.
+              </p>
+            </div>
+          </div>
+          <div class="image-section">
+            <img src="https://res.cloudinary.com/dbmsvqwem/image/upload/v1765673958/Esoly_vvkrar.png" alt="EzCuk Logo" />
+          </div>
+        </section>
+
+        <!-- Process cards -->
+        <section id="design-process" class="design-process section">
+          <div class="text-section process-intro">
+            <h1>DESIGN PROCESS</h1>
+          </div>
+          <div class="process-cards">
+            <article class="card card-yellow">
+              <h3>RESEARCH</h3>
+              <ul>
+                <li>User audience</li>
+                <li>User interviews</li>
+                <li>Jobs & user stories</li>
+                <li>Competitive analysis</li>
+                <li>Functional analysis</li>
+                <li>Moodboard</li>
+              </ul>
+            </article>
+
+            <article class="card card-lilac">
+              <h3>PROTOTYPING</h3>
+              <ul>
+                <li>Functional prototype</li>
+                <li>User flow</li>
+                <li>Wireframes</li>
+              </ul>
+            </article>
+
+            <article class="card card-orange">
+              <h3>UI DESIGN</h3>
+              <ul>
+                <li>Visual concept</li>
+                <li>Design system</li>
+                <li>Components library</li>
+                <li>Animations</li>
+                <li>Interactive prototype</li>
+              </ul>
+            </article>
+
+            <article class="card card-white">
+              <h3>TESTING</h3>
+              <ul>
+                <li>User testing</li>
+                <li>Final corrections</li>
+              </ul>
+            </article>
+          </div>
+          <div class="image-section-process">
+            <p>
+              The design process followed a user-centered approach, starting
+              with research to understand the target audience and their needs.
+              This was followed by prototyping to create a functional layout,
+              and finally UI design to develop an engaging visual experience.
+              User testing ensured the app met user expectations and provided a
+              seamless experience.
+            </p>
+            <img src="https://res.cloudinary.com/dbmsvqwem/image/upload/v1765674015/Design_Process_tl2wbn.png" alt="Esoly Design Process" />
+          </div>
+        </section>
+        <!-- AUDIENCE SECTION -->
+        <section id="audience" class="section audience">
+          <div class="text-section audience-intro">
+            <h1>TARGET AUDIENCE</h1>
+          </div>
+          <div class="persona-image-section">
+            <h3><span style="color: #88c290">PERSONAS (INSIGHTS) </span></h3>
+            <div class="insights-grid">
+              <!-- Persona 1 -->
+              <article class="insight-card card-lilac">
+                <header class="insight-header">
+                  <div>
+                    <p class="insight-name">CÉLINE, 13</p>
+                    <p class="insight-meta">Middle school student (“4ème”)</p>
+                    <p class="insight-meta">
+                      Céline est une petite fille qui aime lire des romans,
+                      comme ceux de Victor Hugo, Les Misérables et Notre-Dame de
+                      Paris. Pour cela, elle les a téléchargés sur sa tablette
+                      afin de les lire facilement.
+                    </p>
+                  </div>
+                  <img
+                    class="insight-avatar"
+                    src="https://res.cloudinary.com/dbmsvqwem/image/upload/v1765674053/kid_cc4hcm.avif"
+                    alt="Céline avatar"
+                  />
+                </header>
+
+                <div class="insight-body">
+                  <p class="insight-sub">Interests</p>
+                  <ul>
+                    <li>Reading</li>
+                    <li>Cartoons</li>
+                    <li>Sports</li>
+                  </ul>
+
+                  <p class="insight-sub">Digital habits</p>
+                  <ul>
+                    <li>Online reading</li>
+                    <li>Netflix</li>
+                  </ul>
+
+                  <p class="insight-sub">Goals</p>
+                  <ul>
+                    <li>Read a printed novel</li>
+                    <li>Improve handwriting</li>
+                    <li>Join theater</li>
+                  </ul>
+
+                  <p class="insight-sub">Needs</p>
+                  <ul>
+                    <li>Sleep deprivation</li>
+                    <li>Anxiety</li>
+                    <li>Visual issues</li>
+                  </ul>
+                </div>
+              </article>
+
+              <!-- Persona 2 -->
+              <article class="insight-card card-yellow">
+                <header class="insight-header">
+                  <div>
+                    <p class="insight-name">SANDRINE, 36</p>
+                    <p class="insight-meta">Nurse · parent</p>
+                    <p class="insight-meta">
+                      Sandrine, maman soucieuse du bien-être de ses enfants,
+                      cherche un moyen efficace et non intrusif de suivre leur
+                      temps d’écran pour les aider à adopter des habitudes plus
+                      saines.
+                    </p>
+                  </div>
+                  <img
+                    class="insight-avatar"
+                    src="https://res.cloudinary.com/dbmsvqwem/image/upload/v1765674054/parent_rvdr8q.jpg"
+                    alt="Sandrine avatar"
+                  />
+                </header>
+
+                <div class="insight-body">
+                  <p class="insight-sub">Interests</p>
+                  <ul>
+                    <li>Reading</li>
+                    <li>Gardening</li>
+                    <li>Family activities</li>
+                  </ul>
+
+                  <p class="insight-sub">Digital habits</p>
+                  <ul>
+                    <li>Digital news</li>
+                    <li>Social networks</li>
+                  </ul>
+
+                  <p class="insight-sub">Goals</p>
+                  <ul>
+                    <li>Reduce children’s screen time</li>
+                  </ul>
+
+                  <p class="insight-sub">Needs</p>
+                  <ul>
+                    <li>Non-intrusive screen-time tracking</li>
+                    <li>Help setting limits consistently</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- USER STORIES SECTION -->
+        <section id="user-stories" class="section user-stories">
+          <p class="user-stories-lead">
+            User stories are built around ESOLY’s 3 modes (Child, Parent,
+            Family) and the core mechanic: set a mission → reduce screen time →
+            grow plants → earn rewards.
+          </p>
+          <h3><span style="color: #88c290">USER STORIES</span></h3>
+          <div class="stories-grid">
+            <!-- CHILD MODE -->
+            <article class="story-card card-lilac">
+              <header class="story-header">
+                <p class="story-role">CHILD MODE</p>
+                <p class="story-subtitle">Self-regulation + motivation</p>
+              </header>
+
+              <ul class="story-list">
+                <li>
+                  As a child, I want to start a mission with a timer so I can
+                  focus on an offline activity.
+                </li>
+                <li>
+                  As a child, I want my seed to grow when I don’t use my phone
+                  so I can see my progress.
+                </li>
+                <li>
+                  As a child, I want to choose mission durations so challenges
+                  feel achievable.
+                </li>
+                <li>
+                  As a child, I want rewards (seeds/XP/items) so I stay
+                  motivated over time.
+                </li>
+                <li>
+                  As a child, I want to track my progress with stats so I can
+                  feel proud of my improvement.
+                </li>
+                <li>
+                  As a child, I want a fun tutorial story (Sam + the garden) so
+                  the app feels like a game.
+                </li>
+              </ul>
+            </article>
+
+            <!-- PARENT MODE -->
+            <article class="story-card card-yellow">
+              <header class="story-header">
+                <p class="story-role">PARENT MODE</p>
+                <p class="story-subtitle">Support without conflict</p>
+              </header>
+
+              <ul class="story-list">
+                <li>
+                  As a parent, I want to encourage less screen time so my child
+                  builds healthier habits.
+                </li>
+                <li>
+                  As a parent, I want to propose alternative activities so we
+                  can spend quality time together.
+                </li>
+                <li>
+                  As a parent, I want to validate my child’s completed mission
+                  so rewards feel fair.
+                </li>
+                <li>
+                  As a parent, I want to send supportive messages so my child
+                  feels encouraged.
+                </li>
+                <li>
+                  As a parent, I want to reward effort (virtual items) so I stay
+                  engaged too.
+                </li>
+                <li>
+                  As a parent, I want simple mission setup so it fits my daily
+                  routine.
+                </li>
+              </ul>
+            </article>
+
+            <!-- FAMILY MODE -->
+            <article class="story-card card-orange">
+              <header class="story-header">
+                <p class="story-role">FAMILY MODE</p>
+                <p class="story-subtitle">Shared missions + collaboration</p>
+              </header>
+
+              <ul class="story-list">
+                <li>
+                  As a family, we want a shared garden so we feel like we’re
+                  progressing together.
+                </li>
+                <li>
+                  As a family, we want to create collaborative challenges so we
+                  replace screens with real activities.
+                </li>
+                <li>
+                  As a family, we want both sides to validate a mission so
+                  results are trusted.
+                </li>
+                <li>
+                  As a family, we want rewards tied to longer missions so big
+                  efforts feel meaningful.
+                </li>
+                <li>
+                  As a family, we want reminders/feedback so we stay consistent
+                  across days.
+                </li>
+                <li>
+                  As a family, we want to see the garden evolve so our teamwork
+                  is visible.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+        <section id="user-flow" class="section user-flow">
+          <div class="text-section user-flow-intro">
+            <h1>USER FLOW</h1>
+          </div>
+          <div class="image-section-user-flow">
+            <div class="user-flow-child">
+              <h3><span style="color: #88c290">USER FLOW - CHILD</span></h3>
+              <img src="https://res.cloudinary.com/dbmsvqwem/image/upload/v1765674138/User-flow-child_wxeper.svg" alt="Esoly User Flow" />
+            </div>
+            <div class="user-flow-parent">
+              <h3><span style="color: #88c290">USER FLOW - PARENT</span></h3>
+              <img src="https://res.cloudinary.com/dbmsvqwem/image/upload/v1765674139/User-flow-parent_gkdlrz.svg" alt="Esoly User Flow" />
+            </div>
+          </div>
+        </section>
+        <!-- WIREFRAMES SECTION -->
+        <section id="wireframes" class="section wireframes">
+          <div class="text-section wireframes-intro">
+            <h1>WIREFRAMES</h1>
+          </div>
+          <div class="image-section-wireframes">
+            <img src="https://res.cloudinary.com/dbmsvqwem/image/upload/v1765674250/Wireframe-esoly_innznt.png" alt="Esoly Wireframes" />
+          </div>
+        </section>
+        <!-- DESIGN SYSTEM SECTION -->
+        <section id="design-system" class="section design-system">
+          <div class="text-section design-system-intro">
+            <h1>DESIGN SYSTEM</h1>
+          </div>
+          <div class="image-section-design-system">
+            <img src="https://res.cloudinary.com/dbmsvqwem/image/upload/v1765674248/Design_Systeme_ngoiiu.svg" alt="Esoly Design System" />
+          </div>
+        </section>
+        <!-- UI RESULTS SECTION -->
+        <section id="ui-results" class="section ui-results">
+          <div class="text-section ui-results-intro">
+            <h1>UI DESIGN & RESULTS</h1>
+          </div>
+          <div class="image-section-ui-results">
+            <img src="https://res.cloudinary.com/dbmsvqwem/image/upload/v1765674329/UI1_rpzspl.png" alt="Esoly UI Design" />
+            <img src="https://res.cloudinary.com/dbmsvqwem/image/upload/v1765674320/UI2_tlpj7l.png" alt="Esoly UI Design" />
+            <img src="https://res.cloudinary.com/dbmsvqwem/image/upload/v1765674321/UI3_tr6xyb.png" alt="Esoly UI Design" />
+          </div>
+          <div class="ui-final">
+            <img src="https://res.cloudinary.com/dbmsvqwem/image/upload/v1765674327/UI4_mmtl3d.png" alt="Esoly UI Design" />
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const pills = document.querySelectorAll(".pill-nav .pill");
+
+      pills.forEach((pill) => {
+        pill.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          // 1) active color
+          pills.forEach((p) => p.classList.remove("is-active"));
+          pill.classList.add("is-active");
+
+          // 2) scroll to section (use href)
+          const targetSelector = pill.getAttribute("href"); // "#about-project"
+          const target = document.querySelector(targetSelector);
+          if (target)
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+
+          // optional: keep URL hash updated
+          history.replaceState(null, "", targetSelector);
+        });
+      });
+    });
+    // Bouton CLOSE (retour à l'accueil)
+    document.querySelector(".btn-close").addEventListener("click", function () {
+      window.location.href = "index.html"; // 👉 Remplace par ton fichier d'accueil si différent
+    });
+  </script>
+</html>

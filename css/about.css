@@ -1,0 +1,562 @@
+@font-face {
+  font-family: "HarmoniaSansMonoBold";
+  src: url("../font/Harmonia-Sans-Font/Harmonia\ Sans\ W01\ Bold.otf")
+    format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HarmoniaSansMonoRegular";
+  src: url("../font/Harmonia-Sans-Font/Harmonia\ Sans\ W01\ Regular.otf")
+    format("opentype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "RobertBold";
+  src: url("../font/roobert-font-family-1739094187-0/RoobertTRIAL-SemiBold-BF67243fd54213d.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobertRegular";
+  src: url("../font/roobert-font-family-1739094187-0/RoobertMonoTRIAL-Regular-BF67243fd29a433.otf")
+    format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobertLight";
+  src: url("../font/roobert-font-family-1739094187-0/RoobertMonoTRIAL-Light-BF67243fd27eae5.otf")
+    format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RoxboroughCF";
+  src: url("../font/Rox/Roxborough\ CF.ttf") format("truetype");
+  font-weight: lighter;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Arketa Regular";
+  src: url("../font/Arketa/OOArketaTrial-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ReviewMedium";
+  src: url(../font/review-font-family-1762405635-0/Review-Medium-Trial-BF63f6d1052cbb4.otf)
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Review";
+  src: url("../font/review-font-family-1762405635-0/Review-Bold-Trial-BF63f6d0f63e8c8.otf")
+    format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ReviewLight";
+  src: url(../font/review-font-family-1762405635-0/Review-Light-Trial-BF63f6d1043a304.otf)
+    format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+:root {
+  --color-light: #f6f5ee;
+  --color-grey-light: #CECECE;
+  --color-grey-dark: #8E8E8E;
+  --color-dark: #141414;
+  --color-primary: #383838;
+  --color-background: var(--color-light);
+  --color-text: var(--color-dark);
+  --color-text-link: var(--color-dark);
+    --color-text-link-hover: var(--color-dark);
+    --color-error: #c34d36;
+}
+/* Dark theme override */
+html[data-theme="dark"] {
+  --color-background: #141414; /* your --color-dark */
+  --color-text: #f6f5ee; /* your --color-light */
+  --color-text-link: #f6f5ee;
+  --color-text-link-hover: #cecece;
+
+  /* optional helpers for UI */
+  --toggle-border: rgba(246, 245, 238, 0.25);
+  --toggle-thumb: #f6f5ee;
+}
+
+/* optional helpers for light mode UI */
+:root {
+  --toggle-border: rgba(20, 20, 20, 0.25);
+  --toggle-thumb: #141414;
+}
+.menu__link {
+  color: var(--color-text);
+}
+.menu-toggle .bar {
+  background-color: var(--color-text);
+}
+.resume-text a {
+  color: var(--color-text);
+}
+.menu-toggle {
+  color: var(--color-text);
+}
+.menu-toggle .bar {
+  background-color: var(--color-text) !important;
+}
+.mobile-menu__list a, .menu__link-span, .resume-text a, .divider h1,.resume-text p, .bloquereloj h4, .bloquereloj .clock , .about-me p, .as-link, #closeBtn{
+  color: var(--color-text) !important;
+}
+
+
+html.no-scroll,
+body.no-scroll {
+  overflow: hidden !important;
+  height: 100vh;
+  touch-action: none;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--color-background);
+  color: var(--color-text); /* <- change from var(--color-dark) */
+  overflow: hidden;
+  overflow-y: auto !important;
+}
+.theme-toggle {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  z-index: 9999;
+
+  width: 62px;
+  height: 32px;
+  padding: 3px;
+
+  border-radius: 999px;
+  background: transparent;
+  border: 2px solid var(--toggle-border);
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+}
+
+.theme-toggle__thumb {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background: var(--toggle-thumb);
+  transform: translateX(0);
+  transition: transform 0.25s ease;
+}
+
+html[data-theme="dark"] .theme-toggle__thumb {
+  transform: translateX(30px);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 3px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* height: 100vh; */
+  background: var(--color-background);
+  color: #383838;
+  overflow: hidden;
+  overflow-y: auto !important;
+}
+#header-text h1 {
+  font-family: "RobertLight", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  color: var(--color-dark);
+}
+/* MENU */
+#nav-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  z-index: 1000;
+  padding: 20px;
+  margin: 0;
+  border-bottom: dotted 1px var(--color-grey-dark);
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease-in-out, background 0.3s ease-in-out;
+  background: transparent;
+}
+
+.menu__wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.menu__inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem; /* spacing between items */
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+/* MENU LINKS */
+.menu__link {
+  position: relative;
+  display: inline-block;
+  color: var(--color-dark);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  font-family: "ReviewLight", serif;
+  transition: color 0.3s ease;
+  letter-spacing: -0.01em;
+}
+
+.menu__link:hover {
+  color: #666;
+  transition: color 0.3s ease;
+}
+.menu__link.active {
+  font-weight: 700; /* ou bold */
+  position: relative;
+  font-family: "ReviewMedium", serif;
+}
+/* === HAMBURGER ICON === */
+.menu-toggle {
+  display: none; /* caché sur desktop */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1101;
+  position: absolute;
+  right: 30px;
+}
+
+.menu-toggle .bar {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-dark);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* animation burger -> croix */
+.menu-toggle.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* === MOBILE MENU === */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--color-background);
+  z-index: 1100;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-menu.open {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-menu__list {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0;
+}
+
+.mobile-menu__list a {
+  text-decoration: none;
+  font-family: "ReviewMedium", serif;
+  color: var(--color-dark);
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu__list a:hover {
+  color: var(--color-grey-dark);
+}
+/* Menu Toggle Button */
+.menu-toggle {
+  display: none; /* Hidden on desktop */
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px 0;
+  position: relative;
+}
+
+/* Content Layout */
+.content {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  gap: 200px;
+  align-items: center;
+}
+
+
+.custom-font {
+  font-family:"Review", sans-serif;
+  font-size: 1em;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  color: #383838;
+  margin-right: 5px;
+}
+.intro {
+  font-family: "RobertLight", sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #281212;
+  text-align: left;
+  margin-top: 20px;
+}
+.as-link {
+  background: none;
+  border: none;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.as-link.clicked {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hidden {
+  display: none;
+}
+
+/* 🎨 Style spécial pour "My work" */
+.work-link {
+  color: #fff;
+  font-weight: 600;
+  background-color: var(--color-dark);
+  cursor: pointer;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.work-link:hover {
+  color: #e0e0e0;
+  text-decoration: underline;
+}
+
+.photo-section {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+ 
+}
+.photo-section img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  filter: saturate(0);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 200px;
+  margin-top: 50px;
+  padding-top: 20px;
+  width: 100%;
+}
+.resume-download {
+  display: flex;
+  font-family: "Arketa Regular", sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.download-btn {
+  margin-left: 10px;
+  background: none;
+  border: none;
+  color: var(--color-dark);
+  font: inherit;
+  cursor: pointer;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+.download-btn:hover {
+  text-decoration: underline;
+  color: #e0e0e0;
+}
+.bottom-section-divider {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.divider {
+  font-size: 5em;
+
+}
+
+/* Fixed Clock Box - Left Side */
+.bloquereloj {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  z-index: 9999;
+  text-align: left;        
+  font-family: "RobertLight", sans-serif;
+  color: var(--color-dark);
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+.clock {
+  font-size: 0.9rem;
+  margin: 0.2rem 0;
+}
+.resume-text {
+  display: flex;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 5px;
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0;
+  font-family: "RobertLight", sans-serif;
+}
+.resume-text a {
+  text-decoration: none;
+  color: var(--color-dark);
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  font-family: "ReviewMedium", sans-serif;
+}
+.highlight-text {
+  font-family: "ReviewMedium", serif;
+}
+@media screen and (max-width: 768px) {
+  /* Adjust layout for mobile */
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+  .menu-toggle {
+    display: flex; /* visible sur mobile */
+  }
+  .menu__inner {
+    display: none;
+  }
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+  }
+  .content {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  .bottom-section-divider {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .intro {
+    text-align: left;
+    padding: 0 20px;
+    font-size: 15px;
+  }
+  .bottom-header {
+    margin-top: 20px ;
+  }
+  .bloquereloj {
+    display: none;
+  }
+  .resume-text {
+    position: static !important; /* remove absolute positioning */
+    order: 2; /* ensure it comes after the title-container in flex layouts */
+    margin-top: 15px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+
+  .resume-text p {
+    text-align: center;
+  }
+
+  /* Optionally reduce font size for mobile */
+  .resume-text a {
+    font-size: 15px;
+  }
+}

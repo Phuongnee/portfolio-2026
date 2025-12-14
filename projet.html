@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Slideshow</title>
+    <link rel="stylesheet" href="./css/projet.css" />
+    <!-- Swiper.js CDN -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=north_east"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav id="nav-menu" class="nav" hidden>
+      <h1 class="custom-title hero-title" id="title" aria-label="PHUONG">
+        <span class="custom-font word first-name">Projects </span>
+      </h1>
+      <!-- === HAMBURGER ICON (visible on mobile) === -->
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- Desktop Menu -->
+      <div>
+        <div class="menu__wrap">
+          <ul class="menu__inner menu-home">
+            <li class="menu__item menu-hover">
+              <a
+                data-splitting
+                data-menu="home"
+                href="./index.html"
+                class="menu__link"
+              >
+                <span class="menu__link-span">Home</span>
+              </a>
+            </li>
+
+            <li class="menu__item menu-hover">
+              <a
+                data-splitting
+                data-menu="project"
+                href="./projet.html"
+                class="menu__link"
+              >
+                <span class="menu__link-span">Projects</span>
+              </a>
+            </li>
+            <li class="menu__item menu-hover">
+              <a
+                data-splitting
+                data-menu="about"
+                href="./about.html"
+                class="menu__link"
+              >
+                <span class="menu__link-span">About</span>
+              </a>
+            </li>
+
+            <li class="menu__item menu-hover">
+              <a
+                data-splitting
+                data-menu="contact"
+                href="./contact.html"
+                class="menu__link"
+              >
+                <span class="menu__link-span">Contact</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- === MOBILE MENU (hidden on desktop) === -->
+      <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-menu__list">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./projet.html">Projects</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="mailto:nthuphuong13111998@gmail.com">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <!-- Characters -->
+      <div class="projects-vertical">
+        <!-- Project 1 -->
+        <div class="project">
+          <div class="project-separator">
+            <div class="project-title">
+              <h3>Se Louvre</h3>
+              <p class="subtitle">UX/UI Design</p>
+            </div>
+            <div class="description">
+              <p>
+                SeLouvre is a mobile app that creates personalized Louvre tours
+                based on each visitor’s tastes and available time.
+              </p>
+            </div>
+            <div class="project-image">
+              <a href="./louvre.html">
+                <p>
+                  <span class="material-symbols-outlined"> north_east </span>
+                </p>
+              </a>
+              <img
+                src="https://res.cloudinary.com/dbmsvqwem/image/upload/v1765731499/SeLouvre_k9r8ls.png"
+                alt="preview"
+                hidden
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project">
+          <div class="project-separator">
+            <div class="project-title">
+              <h3>EZCUK</h3>
+              <p class="subtitle">UX/UI Design</p>
+            </div>
+            <div class="description">
+              <p>
+                EzCuk is a mobile app that helps busy users track their food,
+                cook smarter, and reduce waste through simple, intelligent
+                meal-planning tools.
+              </p>
+            </div>
+            <div class="project-image">
+              <a href="./EzCuk.html">
+                <p>
+                  <span class="material-symbols-outlined"> north_east </span>
+                </p>
+              </a>
+
+              <img
+                src="https://res.cloudinary.com/dbmsvqwem/image/upload/v1765736538/EZCUK1_p1ou9r.png"
+                alt="preview"
+                hidden
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="project">
+          <div class="project-separator">
+            <div class="project-title">
+              <h3>ESOLY</h3>
+              <p class="subtitle">UI Design</p>
+            </div>
+            <div class="description">
+              <p>
+                ESOLY is a mobile app addresses excessive screen time among
+                children and its impact on well-being and family connection.
+              </p>
+            </div>
+            <div class="project-image">
+              <a href="./esoly.html">
+                <p>
+                  <span class="material-symbols-outlined"> north_east </span>
+                </p>
+              </a>
+
+              <img
+                src="https://res.cloudinary.com/dbmsvqwem/image/upload/v1765735835/ESOLY_koipat.png"
+                alt="preview"
+                hidden
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Project 4-->
+        <div class="project">
+          <div class="project-separator">
+            <div class="project-title">
+              <h3>CARDIENCE</h3>
+              <p class="subtitle">Web Design</p>
+            </div>
+            <div class="description">
+              <p>
+                Cardience is a university team project developed with my
+                teammate Eya. I was responsible for the UI design and front-end
+                web development, turning the concept into a working interface.
+              </p>
+            </div>
+            <div class="project-image">
+              <a href="https://phuongnee.github.io/carte-postale/index.html">
+                <p>
+                  <span class="material-symbols-outlined"> north_east </span>
+                </p>
+              </a>
+              <img
+                src="https://res.cloudinary.com/dbmsvqwem/image/upload/v1765729296/Cardience_gnroso.png"
+                alt="preview"
+                hidden
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Project 5 -->
+        <div class="project">
+          <div class="project-separator">
+            <div class="project-title">
+              <h3>Rosee du Matin</h3>
+              <p class="subtitle">Photography</p>
+            </div>
+            <div class="description">
+              <p>
+                Rosée du Matin is a fashion design concept by Phoebe. I
+                collaborated on the project as the photographer, creating the
+                visuals that bring the collection to life.
+              </p>
+            </div>
+            <div class="project-image">
+              <a href="./photo.html">
+                <p>
+                  <span class="material-symbols-outlined"> north_east </span>
+                </p>
+              </a>
+              <img
+                src="https://res.cloudinary.com/dbmsvqwem/image/upload/v1765676148/pic-8_nws7kd.jpg"
+                alt="preview"
+                hidden
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      id="themeToggle"
+      class="theme-toggle"
+      type="button"
+      role="switch"
+      aria-checked="false"
+      aria-label="Toggle dark mode"
+    >
+      <span class="theme-toggle__thumb" aria-hidden="true"></span>
+    </button>
+
+    <script>
+      // HOVER ICON → SHOW PREVIEW
+      document.querySelectorAll(".project").forEach((project) => {
+        const icon = project.querySelector(".project-image span");
+        const imgEl = project.querySelector(".project-image img");
+
+        if (!imgEl) return; // sécurité si pas d'image
+        const imgSrc = imgEl.src;
+
+        icon.addEventListener("mouseenter", () => {
+          previewImg.src = imgSrc;
+          bottomPreview.classList.add("active");
+        });
+
+        icon.addEventListener("mouseleave", () => {
+          bottomPreview.classList.remove("active");
+        });
+      });
+
+      // Récupère l'URL actuelle (nom du fichier)
+      const url = new URL(window.location.href);
+      let current = url.pathname.split("/").pop();
+      if (!current || current === "/") current = "index.html"; // racine -> index.html
+
+      // Helper: normaliser un href (resolu selon la page courante)
+      const normalizeHref = (a) => {
+        const abs = new URL(a.getAttribute("href"), window.location.href);
+        let file = abs.pathname.split("/").pop();
+        if (!file || file === "/") file = "index.html";
+        return file;
+      };
+      const menu = document.getElementById("menu");
+      const menuToggle = document.querySelector(".menu-toggle");
+      const mobileMenu = document.querySelector("#mobileMenu");
+      const navMenu = document.getElementById("nav-menu");
+      // === MENU MOBILE ===
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener("click", () => {
+          menuToggle.classList.toggle("active");
+          mobileMenu.classList.toggle("open");
+          document.body.classList.toggle("no-scroll");
+        });
+      }
+      // Desktop
+      document.querySelectorAll(".menu__link").forEach((link) => {
+        if (normalizeHref(link) === current) {
+          link.classList.add("active");
+          link.setAttribute("aria-current", "page");
+        }
+      });
+      // Create a fixed bottom preview container (only one)
+      const bottomPreview = document.createElement("div");
+      bottomPreview.className = "bottom-preview";
+      bottomPreview.innerHTML = '<img src="" alt="Project preview" />';
+      document.body.appendChild(bottomPreview);
+
+      const previewImg = bottomPreview.querySelector("img");
+      let clickTimeout = null;
+
+      document.querySelectorAll(".project").forEach((project) => {
+        const imgEl = project.querySelector(".project-image img");
+        const imgSrc = imgEl ? imgEl.src : "";
+        const projectURL = project.dataset.url || "./projet.html";
+
+        project.addEventListener("click", () => {
+          if (clickTimeout !== null) {
+            // Double tap → open project
+            clearTimeout(clickTimeout);
+            clickTimeout = null;
+            window.location.href = projectURL;
+          } else {
+            // Single tap → show bottom image
+            clickTimeout = setTimeout(() => {
+              if (imgSrc) {
+                previewImg.src = imgSrc;
+                bottomPreview.classList.add("active");
+              }
+              clickTimeout = null;
+            }, 300);
+          }
+        });
+      });
+
+      // Hide preview when tapped
+      bottomPreview.addEventListener("click", () => {
+        bottomPreview.classList.remove("active");
+      });
+
+      (() => {
+        const STORAGE_KEY = "theme";
+        const root = document.documentElement;
+
+        // Theme already applied in <head>, but keep this as a fallback:
+        root.dataset.theme =
+          localStorage.getItem(STORAGE_KEY) || root.dataset.theme || "light";
+
+        const btn = document.getElementById("themeToggle");
+        if (!btn) return;
+
+        const sync = () =>
+          btn.setAttribute(
+            "aria-checked",
+            String(root.dataset.theme === "dark")
+          );
+        sync();
+
+        btn.addEventListener("click", () => {
+          const next = root.dataset.theme === "dark" ? "light" : "dark";
+          root.dataset.theme = next;
+          localStorage.setItem(STORAGE_KEY, next); // ✅ this makes it persist to other pages
+          sync();
+        });
+      })();
+    </script>
+  </body>
+</html>

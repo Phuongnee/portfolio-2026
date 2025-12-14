@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio de Phuong Nguyen</title>
+
+    <meta
+      name="description"
+      content="Portfolio de Phuong Nguyen — UX/UI Designer & Développeuse front-end. Projets, services et contact."
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/icon-logo.png"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Icons & Libs -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pIVpGJmXaFh0Gx3mWnZJv0c8nqQ4fIh3m2m0kZzQnJvKpR7kZq8+zQ8r0b9kYg8VxNwq1H1qY8Z2H3q1y9l7Xg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Preload main JS (optional) -->
+    <link rel="preload" href="./js/main.js" as="script" />
+  </head>
+
+  <body>
+    <!-- Loading Screen -->
+    <div
+      class="loading-container"
+      id="loading-container"
+      aria-live="polite"
+      aria-label="Chargement"
+    >
+      <h1 id="loading-text">0%</h1>
+    </div>
+
+    <!-- Header -->
+    <header class="header-container">
+      <!-- Navigation -->
+      <nav id="nav-menu" class="nav" hidden>
+        <div id="logo-container">
+          <a href="index.html" aria-label="Accueil">
+            <img
+              src="./images/logo.png"
+              alt="Logo Phuong Nguyen"
+              class="menu__logo"
+            />
+          </a>
+        </div>
+        <h1 class="custom-title hero-title" id="title" aria-label="PHUONG">
+          <span class="custom-font word first-name">(Phuong)</span>
+        </h1>
+
+        <!-- Menu Toggle (Mobile) -->
+        <button
+          id="menu-toggle"
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu-mobile"
+          aria-label="Ouvrir le menu"
+          onclick="openMenu()"
+        >
+          ☰
+        </button>
+
+        <!-- Desktop Menu -->
+        <div
+          class="container menu menu__abs hide-on-mobile"
+          id="menu"
+          role="navigation"
+          aria-label="Navigation principale"
+        >
+          <div class="menu__wrap">
+            <ul class="menu__inner menu-home">
+              <li class="menu__item menu-hover">
+                <a
+                  data-splitting
+                  data-menu="project"
+                  href="./projet.html"
+                  class="menu__link"
+                >
+                  <span class="menu__link-span">01 Projects</span>
+                </a>
+              </li>
+              <li class="menu__item menu-hover">
+                <a
+                  data-splitting
+                  data-menu="about"
+                  href="./about.html"
+                  class="menu__link"
+                >
+                  <span class="menu__link-span">02 About</span>
+                </a>
+              </li>
+              <li class="menu__item menu-hover">
+                <a
+                  data-splitting
+                  data-menu="playground"
+                  href="./photo.html"
+                  class="menu__link"
+                >
+                  <span class="menu__link-span">03 Playground</span>
+                </a>
+              </li>
+              <li class="menu__item menu-hover">
+                <a
+                  data-splitting
+                  data-menu="contact"
+                  href="./contact.html"
+                  class="menu__link"
+                >
+                  <span class="menu__link-span">04 Contact</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="menu-mobile" id="menu-mobile" hidden>
+          <div class="menu-close-container">
+            <button
+              class="menu-close"
+              id="menu-close"
+              type="button"
+              aria-label="Fermer le menu"
+              onclick="closeMenu()"
+            >
+              ×
+            </button>
+          </div>
+          <div class="menu-mobile-inner">
+            <ul class="menu-mobile-list">
+              <li class="menu-mobile-item">
+                <a href="./projet.html">Projects</a>
+              </li>
+              <li class="menu-mobile-item"><a href="./about.html">About</a></li>
+              <li class="menu-mobile-item">
+                <a href="./photo.html">Playground</a>
+              </li>
+              <li class="menu-mobile-item">
+                <a href="./contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="title-container" hidden>
+        <div class="title__wrap title__wrap--left">
+          <p>
+            UX/UI designer, Front-end developper, Creative direction, Visual
+            identities, Photography
+          </p>
+          <p>
+            I love designing digital experiences that blend creativity with
+            practicality.<br />
+            Every interface I create is meant to be engaging and meaningful.
+          </p>
+          <p>
+            I believe in design that truly connects. Every interface,
+            interaction, and detail has a purpose: to <span style="color:blue">inspire, simplify, and
+            make an impact.</span>
+          </p>
+        </div>
+      </div>
+      <!-- Horizontal Projects Carousel -->
+      <div class="projects-carousel">
+        <div class="carousel-track">
+          <div class="project-card">
+            <img
+              src="https://res.cloudinary.com/da9k32mdb/image/upload/v1747599746/Louvre.png"
+              alt="Projet SE LOUVRE"
+            />
+            <p>SE LOUVRE</p>
+            <span>UX/UI Design</span>
+          </div>
+
+          <div class="project-card">
+            <img
+              src="./images/828_4.jpg"
+              alt="Projet CARDIENCE"
+            />
+            <p>CARDIENCE</p>
+            <span>Web Design</span>
+          </div>
+
+          <div class="project-card">
+            <img
+              src="./images/marea-mylo-03-800x533-crop-1.jpg"
+              alt="Projet DATA WEBSITE"
+            />
+            <p>DATA WEBSITE</p>
+            <span>Web Design</span>
+          </div>
+
+          <div class="project-card">
+            <img
+              src="./images/marea-mylo-visuelcv-lowres-800x533-crop-1.jpg"
+              alt="Projet ESOLY"
+            />
+            <p>ESOLY</p>
+            <span>UX/UI Design</span>
+          </div>
+
+          <!-- duplicate slides for infinite loop effect -->
+          <div class="project-card">
+            <img
+              src="./images/Redacted_3.jpg"
+              alt="Projet SE LOUVRE"
+            />
+            <p>SE LOUVRE</p>
+            <span>UX/UI Design</span>
+          </div>
+          <div class="project-card">
+            <img
+              src="https://res.cloudinary.com/da9k32mdb/image/upload/v1747577477/cardience.png"
+              alt="Projet CARDIENCE"
+            />
+            <p>CARDIENCE</p>
+            <span>Web Design</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-header">
+        <div class="bloquereloj">
+          <h4 class="clock" style="color: blue">Paris · Europe</h4>
+          <div id="MyClockDisplay" class="clock">SATURDAY 12:44:00 AM</div>
+        </div>
+        <div class="resume-text">
+          <p><a href="" style="color: blue">Download Resume</a></p>
+          <p>nthuphuong13111998@gmail.com</p>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="horizontal-wrapper">
+      <!-- Portfolio -->
+      <section id="portfolio-section" aria-labelledby="portfolio-heading">
+        <div class="header-portfolio">
+          <div class="header-text">
+            <p id="portfolio-heading">( My Works )</p>
+          </div>
+          <div class="header-line" aria-hidden="true">
+            <hr class="line" />
+          </div>
+        </div>
+
+        <div class="portfolio__description">
+          <div class="portfolio__description-top">
+            <p class="portfolio__description-top-left">
+              I believe in design that truly connects. Every interface,
+              interaction, and detail has a purpose: to
+              <span>inspire</span>, <span>simplify</span>, and
+              <span>make an impact</span>.
+            </p>
+
+            <div class="portfolio__description-top-right">
+              <a href="./louvre.html" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="https://res.cloudinary.com/da9k32mdb/image/upload/v1747599746/Louvre.png"
+                  alt="Projet SE LOUVRE — aperçu"
+                />
+              </a>
+              <p>SE LOUVRE</p>
+              <p class="sub-title">UX/UI Design</p>
+            </div>
+          </div>
+
+          <div class="portfolio__description-middle">
+            <div class="portfolio__description-middle-left">
+              <a
+                href="https://phuongnee.github.io/projet-edito/carte-postale/index.html#/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://res.cloudinary.com/da9k32mdb/image/upload/v1747577477/cardience.png"
+                  alt="Projet CARDIENCE — aperçu"
+                />
+              </a>
+              <p>CARDIENCE</p>
+              <p class="sub-title">Web Design</p>
+            </div>
+
+            <div class="portfolio__description-middle-right">
+              <a
+                href="https://phuongnee.github.io/data-website/data-website/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://res.cloudinary.com/da9k32mdb/image/upload/v1747577476/dataweb.jpg"
+                  alt="Projet DATA WEBSITE — aperçu"
+                />
+              </a>
+              <p>DATA WEBSITE</p>
+              <p class="sub-title">Web Design</p>
+            </div>
+          </div>
+
+          <div class="see-more">
+            <p><a href="./projet.html">See more →</a></p>
+          </div>
+
+          <div class="portfolio__description-bottom">
+            <a href="./pdf/ESOLY.pdf" target="_blank" rel="noopener noreferrer">
+              <img
+                src="https://res.cloudinary.com/da9k32mdb/image/upload/v1747577477/esoly.png"
+                alt="Projet ESOLY — aperçu PDF"
+              />
+            </a>
+            <p>ESOLY</p>
+            <p class="sub-title">UX/UI Design</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Photos -->
+      <section id="photo-section" aria-labelledby="photo-heading">
+        <div class="header-photo">
+          <div class="header-text">
+            <p id="photo-heading">( My Stuffs )</p>
+          </div>
+          <div class="header-line" aria-hidden="true">
+            <hr class="line" />
+          </div>
+        </div>
+
+        <div class="photo-grid">
+          <figure class="portfolio-image">
+            <img
+              src="https://res.cloudinary.com/da9k32mdb/image/upload/v1747576733/pic-8.jpg"
+              alt="Photo intitulée « Rosée du matin »"
+            />
+            <figcaption class="portfolio-label">
+              <p>( Rosée du matin )</p>
+              <button
+                class="arrow-button-portfolio"
+                type="button"
+                aria-label="Voir plus de photos"
+                onclick="location.href='photo.html'"
+              >
+                <span class="arrow-span" aria-hidden="true">→</span>
+              </button>
+            </figcaption>
+          </figure>
+
+          <figure class="portfolio-image">
+            <img
+              src="https://res.cloudinary.com/dbmsvqwem/image/upload/v1760480470/paris-3.jpg"
+              alt="Photo de Paris"
+            />
+            <figcaption class="portfolio-label">
+              <p>( Paris )</p>
+              <button
+                class="arrow-button-portfolio"
+                type="button"
+                aria-label="Voir plus de photos"
+                onclick="location.href='photo.html'"
+              >
+                <span class="arrow-span" aria-hidden="true">→</span>
+              </button>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="service-section" aria-labelledby="service-heading">
+        <div class="header-photo">
+          <div class="header-text">
+            <p id="service-heading">( My Services )</p>
+          </div>
+          <div class="header-line" aria-hidden="true">
+            <hr class="line" />
+          </div>
+        </div>
+
+        <div class="service-content">
+          <article class="service-item">
+            <h2>UX/UI Design</h2>
+            <ul class="service-list">
+              <li>( Wireframing &amp; Prototyping )</li>
+              <li>( Responsive Design )</li>
+              <li>( Design Systems )</li>
+              <li>( Information Architecture )</li>
+              <li>( User Flow )</li>
+            </ul>
+            <p class="service-index" aria-hidden="true">(1)</p>
+          </article>
+
+          <article class="service-item">
+            <h2>Web Design</h2>
+            <ul class="service-list">
+              <li>( Modern Layouts )</li>
+              <li>( Responsive Design )</li>
+              <li>( Visual Storytelling )</li>
+              <li>( Front-end Development )</li>
+            </ul>
+            <p class="service-index" aria-hidden="true">(2)</p>
+          </article>
+
+          <article class="service-item">
+            <h2>Direction Artistique</h2>
+            <ul class="service-list">
+              <li>( Brand Identity )</li>
+              <li>( Visual Communication )</li>
+              <li>( Creative Strategy )</li>
+              <li>( Graphic Design )</li>
+            </ul>
+            <p class="service-index" aria-hidden="true">(3)</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contact CTA -->
+      <section id="contact-section" aria-labelledby="contact-heading">
+        <div class="contact-header">
+          <h1 id="contact-heading">
+            GET IN <span class="custom-font">TOUCH</span>
+          </h1>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-container">
+      <section class="contact-info" aria-labelledby="footer-contact-heading">
+        <div class="contact-left">
+          <p>
+            Now that you got here, why not getting in touch? Look around — there
+            are all my socials and email address. If you want to collaborate or
+            you have a new cool idea, feel free to drop me a message. I’d love
+            to hear it!
+          </p>
+        </div>
+
+        <div class="contact-right">
+          <p>
+            <strong><a href="#" rel="noopener noreferrer">LinkedIn</a></strong>
+            <strong><a href="#" rel="noopener noreferrer">Instagram</a></strong>
+            <strong><a href="#" rel="noopener noreferrer">Behance</a></strong>
+          </p>
+          <p class="email">
+            <span class="arrow" aria-hidden="true">→</span>
+            <a href="mailto:nthuphuong13111998@gmail.com"
+              >nthuphuong13111998@gmail.com</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <div class="footer">
+        <p>© 2025 BY PHUONG NGUYEN</p>
+
+        <!-- Back to Top -->
+        <div class="back-to-top">
+          <a
+            href="#top"
+            class="semplice-event"
+            data-event-type="helper"
+            data-event="scrollToTop"
+            aria-label="Revenir en haut"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <g id="arrow_up" clip-path="url(#clip0_1415_14153)">
+                <path
+                  id="Subtract"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M9.99805 20.0001C15.5209 20.0001 19.998 15.523 19.998 10.0001C19.998 4.47728 15.5209 0.000126922 9.99805 0.000125916C4.4752 0.000125079 -0.00195266 4.47728 -0.00195316 10.0001C-0.00195366 15.523 4.4752 20.0001 9.99805 20.0001ZM10.4861 4.93078C10.2053 4.69003 9.79082 4.69003 9.50995 4.93078L6.00995 7.93077C5.69546 8.20034 5.65904 8.67382 5.9286 8.98831C6.19817 9.3028 6.67164 9.33923 6.98614 9.06966L9.24805 7.13088L9.24805 14.5002C9.24805 14.9144 9.58383 15.2502 9.99805 15.2502C10.4123 15.2502 10.748 14.9144 10.748 14.5002L10.748 7.13088L13.01 9.06966C13.3244 9.33923 13.7979 9.30281 14.0675 8.98831C14.3371 8.67382 14.3006 8.20034 13.9861 7.93078L10.4861 4.93078Z"
+                  fill="#1C1C1C"
+                ></path>
+              </g>
+              <defs>
+                <clipPath id="clip0_1415_14153">
+                  <rect
+                    width="20"
+                    height="20"
+                    fill="white"
+                    transform="translate(20 20) rotate(-180)"
+                  ></rect>
+                </clipPath>
+              </defs>
+            </svg>
+            <span class="back-to-top-text">Top</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts (deferred) -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script
+      src="https://unpkg.com/splitting/dist/splitting.min.js"
+      defer
+    ></script>
+    <script src="./js/main.js" defer></script>
+  </body>
+</html>

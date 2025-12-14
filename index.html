@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio de Phuong Nguyen</title>
+
+    <meta
+      name="description"
+      content="Portfolio de Phuong Nguyen — UX/UI Designer & Développeuse front-end. Projets, services et contact."
+    />
+    <script>
+      (function () {
+        const saved = localStorage.getItem("theme");
+        document.documentElement.dataset.theme = saved || "light"; // default light
+      })();
+    </script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/icon-logo.png"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Icons & Libs -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pIVpGJmXaFh0Gx3mWnZJv0c8nqQ4fIh3m2m0kZzQnJvKpR7kZq8+zQ8r0b9kYg8VxNwq1H1qY8Z2H3q1y9l7Xg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Preload main JS (optional) -->
+    <link rel="preload" href="./js/main.js" as="script" />
+  </head>
+
+  <body>
+    <!-- Loading Screen -->
+    <div
+      class="loading-container"
+      id="loading-container"
+      aria-live="polite"
+      aria-label="Chargement"
+    >
+      <h1 id="loading-text" class="dot-animation">loading</h1>
+    </div>
+
+    <!-- Header -->
+    <header class="header-container">
+      <!-- Navigation -->
+      <nav id="nav-menu" class="nav" hidden>
+        <h1 class="custom-title hero-title" id="title" aria-label="PHUONG">
+          <span class="custom-font word first-name"
+            ><a href="./index.html">Phuong Nguyen</a></span
+          >
+        </h1>
+        <!-- === HAMBURGER ICON (visible on mobile) === -->
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+        <!-- Desktop Menu -->
+        <div
+          class="container menu menu__abs hide-on-mobile"
+          id="menu"
+          role="navigation"
+          aria-label="Navigation principale"
+        >
+          <div class="menu__wrap">
+            <ul class="menu__inner menu-home">
+              <li class="menu__item menu-hover">
+                <a
+                  data-splitting
+                  data-menu="home"
+                  href="./index.html"
+                  class="menu__link"
+                >
+                  <span class="menu__link-span">Home</span>
+                </a>
+              </li>
+
+              <li class="menu__item menu-hover">
+                <a
+                  data-splitting
+                  data-menu="project"
+                  href="./projet.html"
+                  class="menu__link"
+                >
+                  <span class="menu__link-span">Projects</span>
+                </a>
+              </li>
+              <li class="menu__item menu-hover">
+                <a
+                  data-splitting
+                  data-menu="about"
+                  href="./about.html"
+                  class="menu__link"
+                >
+                  <span class="menu__link-span">About</span>
+                </a>
+              </li>
+
+              <li class="menu__item menu-hover">
+                <a
+                  data-splitting
+                  data-menu="contact"
+                  href="mailto:nthuphuong13111998@gmail.com"
+                  class="menu__link"
+                >
+                  <span class="menu__link-span">Contact</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- === MOBILE MENU (hidden on desktop) === -->
+        <div class="mobile-menu" id="mobileMenu">
+          <ul class="mobile-menu__list">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./projet.html">Projects</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="mailto:nthuphuong13111998@gmail.com">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="title-container" hidden>
+        <div class="title__wrap title__wrap--left">
+          <p>
+            UX/UI designer, Front-end developper, Creative direction, Visual
+            identities, Photography
+          </p>
+          <p>
+            I love designing digital experiences that blend creativity with
+            practicality.<br />
+            Every interface I create is meant to be engaging and meaningful.
+          </p>
+          <p>
+            I believe in design that truly connects. Every interface,
+            interaction, and detail has a purpose: to
+            <span class="highlight-text"
+              >inspire, simplify, and make an impact.</span
+            >
+          </p>
+        </div>
+      </div>
+      <!-- Horizontal Projects Carousel -->
+      <div class="projects-carousel">
+        <div class="carousel-track">
+          <div class="project-card">
+            <a href="./EzCuk.html">
+              <img
+                src="https://res.cloudinary.com/dbmsvqwem/image/upload/v1765736538/EZCUK1_p1ou9r.png"
+                alt="Projet Ezcuk"
+              />
+            </a>
+            <div class="title-subtitle">
+              <p>EZCUK</p>
+              <span class="sub-title">UX/UI Design</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <a href="./photo.html"
+              ><img
+                src="https://res.cloudinary.com/dbmsvqwem/image/upload/v1765676148/pic-8_nws7kd.jpg"
+                alt="Projet ROSEE DU MATIN"
+              />
+            </a>
+            <div class="title-subtitle">
+              <p>ROSEE DU MATIN</p>
+              <span class="sub-title">Photography</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <a href="https://phuongnee.github.io/carte-postale/index.html">
+              <img
+                src="https://res.cloudinary.com/dbmsvqwem/image/upload/v1765729078/Cardience_nhoyps.png"
+                alt="Projet CARDIENCE"
+              />
+            </a>
+            <div class="title-subtitle">
+              <p>CARDIENCE</p>
+              <span class="sub-title">Web Design</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <a href="./louvre.html"
+              ><img
+                src="https://res.cloudinary.com/dbmsvqwem/image/upload/v1765731499/SeLouvre_k9r8ls.png"
+                alt="Projet SE LOUVRE"
+            /></a>
+            <div class="title-subtitle">
+              <p>SE LOUVRE</p>
+              <span class="sub-title">UX/UI Design</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <a href="./esoly.html">
+              <img
+                src="https://res.cloudinary.com/dbmsvqwem/image/upload/v1765735835/ESOLY_koipat.png"
+                alt="Projet Esoly"
+              />
+            </a>
+            <div class="title-subtitle">
+              <p>ESOLY</p>
+              <span class="sub-title">UX/UI Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom Header -->
+
+      <div class="bottom-header">
+        <div class="bloquereloj">
+          <h4 class="clock">
+            <span class="highlight-text">Paris · Europe</span>
+          </h4>
+          <div id="MyClockDisplay" class="clock">SATURDAY 12:44:00 AM</div>
+        </div>
+        <div class="resume-text">
+          <p>
+            <a href="./pdf/CV-Phuong Nguyen.pdf"
+              ><span
+                class="highlight-text"
+                style="
+                  text-decoration: underline;
+                  text-underline-offset: 3px;
+                  text-decoration-thickness: 1.5px;
+                "
+                >Download Resume</span
+              ></a
+            >
+          </p>
+          <p>nthuphuong13111998@gmail.com</p>
+        </div>
+      </div>
+    </header>
+    <button
+      id="themeToggle"
+      class="theme-toggle"
+      type="button"
+      role="switch"
+      aria-checked="false"
+    >
+      <span class="theme-toggle__thumb" aria-hidden="true"></span>
+    </button>
+
+    <!-- Scripts (deferred) -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script
+      src="https://unpkg.com/splitting/dist/splitting.min.js"
+      defer
+    ></script>
+    <script src="./js/main.js" defer></script>
+  </body>
+</html>

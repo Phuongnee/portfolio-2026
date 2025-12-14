@@ -1,0 +1,450 @@
+
+@font-face {
+  font-family: "RobertBold";
+  src: url("../font/roobert-font-family-1739094187-0/RoobertTRIAL-SemiBold-BF67243fd54213d.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobertRegular";
+  src: url("../font/roobert-font-family-1739094187-0/RoobertMonoTRIAL-Regular-BF67243fd29a433.otf")
+    format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RoxboroughCF";
+  src: url("../font/Rox/Roxborough\ CF.ttf") format("truetype");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arketa Regular";
+  src: url("../font/Arketa/OOArketaTrial-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Review";
+  src: url("../font/review-font-family-1762405635-0/Review-Bold-Trial-BF63f6d0f63e8c8.otf")
+    format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ReviewMedium";
+  src: url(../font/review-font-family-1762405635-0/Review-Medium-Trial-BF63f6d1052cbb4.otf)
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ReviewLight";
+  src: url(../font/review-font-family-1762405635-0/Review-Light-Trial-BF63f6d1043a304.otf)
+    format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobertLight";
+  src: url("../font/roobert-font-family-1739094187-0/RoobertMonoTRIAL-Light-BF67243fd27eae5.otf")
+    format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+:root {
+  --color-light: #f6f5ee;
+  --color-grey-light: #cecece;
+  --color-grey-dark: #8e8e8e;
+  --color-dark: #141414;
+  --color-primary: #383838;
+  --color-background: var(--color-light);
+  --color-text: var(--color-dark);
+  --color-text-link: var(--color-dark);
+  --color-text-link-hover: var(--color-dark);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--color-background);
+  overflow: hidden;
+  overflow-y: auto !important;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+#nav-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+  z-index: 1000;
+  padding: 20px;
+  margin: 0;
+  border-bottom: dotted 1px var(--color-grey-dark);
+}
+.btn-close {
+  font-family: "RobertLight", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--color-dark);
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+/* ========== Main Container ========== */
+.container {
+  width: 100%;
+  margin: 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ========== Header Section ========== */
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  margin-bottom: 100px;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.info {
+  text-align: right;
+}
+
+.info p {
+  font-size: 16px;
+  color: #383838;
+  margin: 4px 0;
+  font-family: "RobertLight", sans-serif;
+  font-weight: 350;
+  letter-spacing: -0.05em;
+  line-height: 1.2;
+
+}
+
+.info span {
+  color: var(--color-grey-dark);
+}
+.description {
+  font-family: "RobertLight", sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  font-weight: 350;
+  letter-spacing: -0.05em;
+  line-height: 1.2;
+  color: var(--color-dark);
+  max-width: 800px;
+  width: 100%;
+  margin: 40px 40px;
+  text-align: left;
+}
+/* ========== Messy Image Layout ========== */
+.gallery {
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.photo-group{
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+.photo-group-1 {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.photo-group-1 img{
+  width: 320px !important; 
+  height: auto;
+  padding: 60px 0;
+  border-radius: 5px;
+}
+.photo-group-2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 20px;
+  padding: 0 80px;
+}
+.caption {
+  font-family: "RoobertRegular", sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  text-align: center;
+  color: var(--color-dark);
+  max-width: 700px;
+
+}
+.photo-group-2 img{
+  width: 250px !important; 
+  height: auto;
+  border-radius: 5px ;
+}
+.photo-single {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 0;
+}
+.photo-single-1 img{
+  width: 250px !important; 
+  height: auto;
+  border-radius: 5px;
+}
+.photo-single img{
+  width: 350px !important; 
+  height: auto;
+  border-radius: 5px;
+}
+.photo-single-2 img{
+  width: 250px !important; 
+  height: auto;
+  border-radius: 5px;
+}
+.photo-group-3 {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 100px 0;
+}
+.photo-group-4 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  padding-right:150px;
+  margin: 50px;
+}
+.photo-group-5 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 150px;
+}
+.photo-couple {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  padding: 80px 0;
+  padding-right: 150px;
+}
+
+/* Default image styles */
+.gallery img {
+  width: 220px;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+
+/* TITLE */
+.custom-title {
+  font-weight: 200;
+  font-size: 3rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--color-text);
+  font-family: "Review", serif;
+  text-align: left;
+  display: flex;
+}
+p a {
+  position: relative;
+  text-decoration: none;
+  color: black; /* Default text color */
+  font-family: "RoxboroughCF", serif; /* Use the custom font */
+  transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+/* Underline Effect */
+p a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Position the underline below text */
+  width: 100%;
+  height: 2px; /* Thickness of the underline */
+  background-color: black; /* Color of the underline */
+  transform: scaleX(0); /* Start with no width */
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Hover Effect - Underline Appears */
+p a:hover::after {
+  transform: scaleX(1); /* Expand the underline */
+}
+
+/* Hover Effect - Change Text Color */
+p a:hover {
+  color: #666; /* Change text color on hover */
+}
+/* Footer Copyright */
+.footer {
+  margin-top: 20px;
+  font-size: 14px;
+  padding-top: 10px;
+  padding: 20px 60px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center; /* Ensures spacing between text & button */
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+/* Back-to-Top Button */
+.back-to-top {
+  position: absolute;
+  right: 30px; /* Position it on the right side of the footer */
+  bottom: 10px;
+}
+
+.back-to-top a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  cursor: pointer;
+  gap: 5px; /* Space between icon and text */
+  text-decoration: none;
+}
+
+/* Icon */
+.back-to-top svg {
+  width: 24px;
+  height: 24px;
+  fill: black; /* Default color */
+  transition: fill 0.3s ease-in-out;
+}
+
+/* Text */
+.back-to-top-text {
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.back-to-top:hover svg {
+  fill: #666; /* Change icon color on hover */
+}
+
+.back-to-top:hover .back-to-top-text {
+  color: #666; /* Change text color on hover */
+}
+/* ========== Responsive Design (Mobile) ========== */
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: auto;
+    cursor: pointer;
+  }
+  .header {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+  }
+  .custom-title {
+    font-size: 36px;
+    text-align: center;
+  }
+  .description {
+    font-size: 14px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    text-align: left;
+    margin: 0 0 20px 0;
+
+  }
+  .info p {
+    font-family: "ReviewMedium", serif;
+  }
+  .info span {
+    font-family: "Arketa Regular", sans-serif;
+  }
+
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 0 20px;
+  }
+  .photo-group, .photo-group-1, .photo-group-3, .photo-group-4, .photo-group-5, .photo-couple {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  
+  .photo-group-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  .caption {
+    font-size: 14px;
+    padding-top: 100px;
+  }
+}

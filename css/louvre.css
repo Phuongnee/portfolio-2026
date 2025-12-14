@@ -1,0 +1,2030 @@
+
+
+@font-face {
+  font-family: "RobertBold";
+  src: url("../font/roobert-font-family-1739094187-0/RoobertTRIAL-SemiBold-BF67243fd54213d.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RoxboroughCF";
+  src: url("../font/Rox/Roxborough\ CF.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobertRegular";
+  src: url("../font/roobert-font-family-1739094187-0/RoobertMonoTRIAL-Regular-BF67243fd29a433.otf")
+    format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ReviewMedium";
+  src: url(../font/review-font-family-1762405635-0/Review-Medium-Trial-BF63f6d1052cbb4.otf)
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ReviewLight";
+  src: url(../font/review-font-family-1762405635-0/Review-Light-Trial-BF63f6d1043a304.otf)
+    format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobertLight";
+  src: url("../font/roobert-font-family-1739094187-0/RoobertMonoTRIAL-Light-BF67243fd27eae5.otf")
+    format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+:root {
+  --color-light: #f6f5ee;
+  --color-grey-light: #cecece;
+  --color-grey-dark: #8e8e8e;
+  --color-dark: #141414;
+  --color-primary: #383838;
+  --color-background: var(--color-light);
+  --color-text: var(--color-dark);
+  --color-text-link: var(--color-dark);
+  --color-text-link-hover: var(--color-dark);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* height: 100vh; */
+  background: #f9f8f3;
+  color: #383838;
+  overflow: hidden;
+  overflow-y: auto !important;
+}
+
+#nav-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+  z-index: 1000;
+  padding: 20px;
+  margin: 0;
+  border-bottom: dotted 1px var(--color-grey-dark);
+}
+.btn-close {
+  font-family: "RobertLight", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--color-dark);
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+/* --------- CONTAINER & HEADER --------- */
+
+.container {
+  width: 100%;
+  margin: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* dernier comportement défini dans ton code */
+  position: relative;
+  height: 100vh;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 10;
+}
+
+.custom-title {
+  font-family: "ReviewMedium", serif; /* Use the custom font */
+  font-weight: 400;
+  font-size: 48px;
+  letter-spacing: -0.05em;
+  line-height: 1.2;
+  color: #1c1c1c;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.custom-font {
+  font-size: 48px;
+  line-height: 1.2;
+  font-family: "RoxboroughCF", serif;
+  font-style: italic;
+}
+.header-text h1 {
+  font-size: 72px;
+  font-weight: bold;
+  font-family: "RobertLight", sans-serif;
+  white-space: nowrap;
+
+}
+
+.header-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.project-image {
+  display: flex; /* Supprime tout espace blanc autour de l'image */
+  margin-top: 40px; /* Centre l'image horizontalement */
+  max-width: 100%; /* Assure que l'image ne dépasse pas la largeur du conteneur */
+  height: auto; /* Maintient les proportions de l'image */
+}
+
+/* --------- CONTENT 1 --------- */
+
+.content-1 {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: space-between; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  gap: 40px; /* Ajoute de l'espace entre les éléments */
+  width: 100%;
+  padding: 0 200px; /* Ajoute un peu de padding horizontal */
+  margin-top: 150px;
+}
+
+.text-content {
+  flex: 1; /* Permet au texte de prendre l'espace disponible */
+  max-width: 500px; /* Limite la largeur maximale */
+  text-align: left; /* Aligne le texte à gauche */
+}
+
+.text-content h2 {
+  font-size: 56px;
+  margin-bottom: 15px;
+  font-family: "RoxboroughCF", serif;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.2;
+  color: #1c1c1c;
+  text-decoration: underline;
+  text-decoration-color: #1c1c1c;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 10px;
+}
+
+.text-content p {
+  font-family: "RobertLight", sans-serif;
+}
+
+.image-container {
+  flex: 1; /* Permet à l'image de prendre l'espace disponible */
+  max-width: 50%; /* Limite la largeur maximale */
+  display: flex; /* Utilise flex pour centrer l'image si nécessaire */
+  justify-content: center; /* Centre l'image horizontalement */
+  align-items: center; /* Centre l'image verticalement */
+}
+
+.project-image-1 {
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* --------- CONTENT 2 --------- */
+
+.content-2 {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: center; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  text-align: center;
+  width: 100%;
+  padding: 0 5%; /* Ajoute un peu de padding horizontal */
+  margin-top: 150px;
+  flex-direction: column;
+  color: #f9f8f3;
+  background-color: #008573;
+}
+
+.text-content-2 {
+  flex: 1; /* Permet au texte de prendre l'espace disponible */
+  max-width: 1200px; /* Limite la largeur maximale */
+  text-align: center; /* Aligne le texte à gauche */
+  margin-bottom: 100px;
+}
+
+.text-content-2 h2 {
+  font-size: 56px;
+  margin-bottom: 20px;
+  font-family: "RoxboroughCF", serif;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.2;
+  padding: 40px;
+  text-decoration: underline;
+  text-decoration-color: #f9f8f3;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 10px;
+}
+
+.text-content-2 p {
+  font-family: "RobertLight", sans-serif;
+  font-weight: 600;
+}
+
+.image-container-2 {
+  flex: 1; /* Permet à l'image de prendre l'espace disponible */
+  max-width: 50%; /* Limite la largeur maximale */
+  display: flex; /* Utilise flex pour centrer l'image si nécessaire */
+  justify-content: center; /* Centre l'image horizontalement */
+  align-items: center; /* Centre l'image verticalement */
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.project-image-2 {
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* --------- CONTENT 3 --------- */
+
+.content-3 {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: space-between; /* Place les éléments aux extrémités */
+  align-items: flex-start; /* Aligne les éléments en haut */
+  gap: 40px; /* Ajoute de l'espace entre les éléments */
+  width: 100%;
+  margin-top: 150px;
+  flex-direction: column; /* Dispose les éléments en colonne */
+  background-color: #1c1c1c;
+  padding: 150px; /* Ajoute du padding autour du contenu */
+}
+
+.content-3 h2 {
+  font-size: 56px;
+  margin-bottom: 30px;
+  font-family: "RoxboroughCF", serif;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.2;
+  color: #f9f8f3;
+  text-decoration: underline;
+  text-decoration-color: #f9f8f3;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 10px;
+}
+
+.text-content-3 {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  flex-direction: row; /* Dispose les éléments en ligne */
+  justify-content: space-between; /* Ajoute de l'espace entre les éléments */
+  align-items: flex-start; /* Aligne les éléments en haut */
+  gap: 20px; /* Ajoute un espace entre les éléments */
+  width: 100%; /* Assure que l'élément occupe toute la largeur */
+}
+
+.text-content-3 p {
+  font-family: "RobertBold";
+  margin-bottom: 10px; /* Espace entre le texte et la liste */
+  font-size: 20px;
+  line-height: 1.5; /* Ajuste l'espacement entre les lignes */
+  font-weight: 600;
+  color: #c5c5c5;
+}
+
+.text-content-3 ul {
+  font-family: "RobertLight", sans-serif;
+  padding: 0; /* Enlève le padding par défaut */
+  color: #c5c5c5;
+}
+
+.text-content-3 li {
+  margin-bottom: 10px; /* Espace entre les éléments de la liste */
+  color: #c5c5c5;
+}
+
+/* --------- CONTENT 4 --------- */
+
+.content-4 {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: center; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  text-align: center;
+  width: 100%;
+  padding: 0 5%; /* Ajoute un peu de padding horizontal */
+  margin-top: 150px;
+  flex-direction: column;
+}
+
+.text-content-4 {
+  flex: 1; /* Permet au texte de prendre l'espace disponible */
+  max-width: 1500px; /* Limite la largeur maximale */
+  text-align: center; /* Aligne le texte à gauche */
+}
+
+.text-content-4 h2 {
+  font-size: 56px;
+  margin-bottom: 40px;
+  font-family: "RoxboroughCF", serif;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.2;
+  padding: 40px;
+  text-decoration: underline;
+  text-decoration-color: #1c1c1c;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 10px;
+}
+
+/* --------- CONTENT 5 --------- */
+
+.content-5 {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: space-between; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  gap: 40px; /* Ajoute de l'espace entre les éléments */
+  width: 100%;
+  margin-top: 150px;
+  flex-direction: column; /* Dispose les éléments en colonne */
+}
+
+.text-content-5 {
+  flex: 1; /* Permet au texte de prendre l'espace disponible */
+  max-width: 1500px; /* Limite la largeur maximale */
+  text-align: left; /* Aligne le texte à gauche */
+}
+
+.text-content-5 h2 {
+  font-size: 56px;
+  margin-bottom: 35px;
+  font-family: "RoxboroughCF", serif;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.2;
+  color: #1c1c1c;
+  text-decoration: underline;
+  text-decoration-color: #1c1c1c;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 10px;
+}
+
+.text-content-5 p {
+  font-family: "RobertLight", sans-serif;
+  margin-bottom: 10px; /* Espace entre le texte et la liste */
+  font-size: 16px;
+  line-height: 1.2; /* Ajuste l'espacement entre les lignes */
+  letter-spacing: -0.05em;
+}
+
+.image-container-5 {
+  flex: 1; /* Permet à l'image de prendre l'espace disponible */
+  max-width: 50%; /* Limite la largeur maximale */
+  display: flex; /* Utilise flex pour centrer l'image si nécessaire */
+  justify-content: center; /* Centre l'image horizontalement */
+  align-items: center; /* Centre l'image verticalement */
+  margin-top: 100px;
+  margin-bottom: 100px;
+  gap: 40px; /* Ajoute un espace entre les éléments */
+}
+
+.project-image-5 {
+  max-width: 500px;
+  width: 100%;
+  height: 300px; /* Maintient les proportions de l'image */
+  border-radius: 20px; /* Ajoute des coins arrondis */
+}
+
+.info-5 {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: center; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  text-align: left;
+  width: 100%;
+  padding: 0 5%; /* Ajoute un peu de padding horizontal */
+  flex-direction: column; /* Dispose les éléments en colonne */
+}
+
+.info-5 h3 {
+  font-family: "ReviewMedium", sans-serif;
+  margin-bottom: 10px; /* Espace entre le texte et la liste */
+  font-size: 20px;
+  line-height: 1.2; /* Ajuste l'espacement entre les lignes */
+  font-weight: 600;
+}
+
+.info-5 p {
+  font-family: "RobertLight", sans-serif;
+  margin-bottom: 10px; /* Espace entre le texte et la liste */
+  font-size: 16px;
+  line-height: 1.2; /* Ajuste l'espacement entre les lignes */
+}
+
+.info-5 a {
+  font-family: "ReviewMedium", sans-serif;
+  margin-bottom: 10px; /* Espace entre le texte et la liste */
+  font-size: 16px;
+  line-height: 1.2; /* Ajuste l'espacement entre les lignes */
+  color: #008573;
+  text-decoration: none; /* Enlève le soulignement par défaut */
+  font-style: italic;
+}
+
+/* --------- CONTENT 6 --------- */
+
+.content-6 {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: space-between; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  gap: 40px; /* Ajoute de l'espace entre les éléments */
+  width: 100%;
+  margin-top: 150px;
+  flex-direction: column; /* Dispose les éléments en colonne */
+}
+
+.text-content-6 {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  flex-direction: row; /* Dispose les éléments en ligne */
+  justify-content: center; /* Ajoute de l'espace entre les éléments */
+  align-items: flex-start; /* Aligne les éléments en haut */
+  gap: 20px; /* Ajoute un espace entre les éléments */
+  width: 100%; /* Assure que l'élément occupe toute la largeur */
+}
+
+.text-content-6 h2 {
+  font-size: 56px;
+  margin-bottom: 15px;
+  font-family: "RoxboroughCF", serif;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.2;
+  color: #1c1c1c;
+  text-decoration: underline;
+  text-decoration-color: #1c1c1c;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 10px;
+}
+
+.image-container-6 {
+  flex: 1; /* Permet à l'image de prendre l'espace disponible */
+  max-width: 700px; /* Limite la largeur maximale */
+  display: flex; /* Utilise flex pour centrer l'image si nécessaire */
+  justify-content: center; /* Centre l'image horizontalement */
+  align-items: center; /* Centre l'image verticalement */
+}
+
+.project-image-6 {
+  width: 100%;
+}
+
+/* --------- PAIN POINTS --------- */
+
+.pain-point-content h2 {
+  font-size: 56px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  font-family: "RoxboroughCF", serif;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.2;
+  color: #1c1c1c;
+  text-decoration: underline;
+  text-decoration-color: #1c1c1c;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 10px;
+  justify-content: center;
+  text-align: center;
+}
+
+.pain-point {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: center; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  text-align: left;
+  width: 100%;
+  padding: 0 5%; /* Ajoute un peu de padding horizontal */
+  flex-direction: row; /* Dispose les éléments en colonne */
+  gap: 20px; /* Ajoute un espace entre les éléments */
+}
+
+.p-text {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: center; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  text-align: left;
+  max-width: 400px;
+  height: 150px;
+  background-color: #1c1c1c;
+  color: #f9f8f3;
+  padding: 20px;
+  border-radius: 12px;
+  font-family: "RobertLight", sans-serif;
+  font-weight: 200;
+}
+
+/* --------- CONTENT 7 --------- */
+
+.content-7 {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: space-between; /* Place les éléments aux extrémités */
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 150px;
+  flex-direction: row; /* Dispose les éléments en colonne */
+}
+
+.content-left {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: flex-start; /* Place les éléments aux extrémités */
+  align-items: flex-start; /* Aligne les éléments en haut */
+  text-align: left;
+  width: 100%;
+  padding-left: 250px;
+  flex-direction: column; /* Dispose les éléments en colonne */
+  gap: 60px;
+}
+
+.content-left h2 {
+  font-size: 56px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  font-family: "RoxboroughCF", serif;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.2;
+  color: #1c1c1c;
+  text-decoration: underline;
+  text-decoration-color: #1c1c1c;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 10px;
+}
+
+.text-content-left {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  text-align: left;
+  width: 100%;
+  flex-direction: column; /* Dispose les éléments en colonne */
+  gap: 20px; /* Ajoute un espace entre les éléments */
+  font-family: "RobertLight", sans-serif;
+}
+
+.text-content-7 ul li {
+  font-family: "RobertLight", sans-serif;
+  margin-bottom: 10px; /* Espace entre le texte et la liste */
+  font-size: 20px;
+  line-height: 1.5; /* Ajuste l'espacement entre les lignes */
+}
+
+.content-right {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: center; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  text-align: left;
+  width: 100%;
+  padding: 0 150px; /* Ajoute un peu de padding horizontal */
+  flex-direction: column; /* Dispose les éléments en colonne */
+}
+
+.text-right {
+  color: #1c1c1c;
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.text-right h2 {
+  margin-bottom: 10px;
+  font-family: "ReviewMedium", sans-serif;
+  font-size: 24px;
+  line-height: 1.2;
+}
+.text-right p {
+  font-family: "RobertLight", sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.05em;
+}
+
+/* --------- CONTENT 8 --------- */
+
+.content-8 {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: space-between; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  gap: 40px; /* Ajoute de l'espace entre les éléments */
+  width: 100%;
+  margin-top: 150px;
+  flex-direction: column; /* Dispose les éléments en colonne */
+  background-image: url("https://res.cloudinary.com/da9k32mdb/image/upload/v1747438737/bg1.jpg");
+  background-size: cover; /* Couvre tout le conteneur */
+  background-position: center; /* Centre l'image de fond */
+  background-repeat: no-repeat; /* Évite la répétition de l'image */
+  padding: 100px; /* Ajoute du padding autour du contenu */
+  position: relative; /* Définit un contexte pour le pseudo-élément */
+}
+
+.content-8::after {
+  content: "";
+  position: absolute; /* Positionne l'overlay par rapport à .content-8 */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(28, 28, 28, 0.5); /* Couche sombre */
+  opacity: 1; /* Ajuste l'opacité de l'overlay */
+  z-index: 1; /* Place l'overlay derrière le contenu de .content-8 */
+}
+
+.content-8 > * {
+  position: relative; /* Assure que le contenu reste au-dessus de l'overlay */
+  z-index: 2; /* Place le contenu au-dessus de l'overlay */
+}
+
+.text-content-8 {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: center; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  text-align: left;
+  width: 100%;
+  padding: 0 5%; /* Ajoute un peu de padding horizontal */
+  flex-direction: column; /* Dispose les éléments en colonne */
+}
+
+.text-content-8 h2 {
+  font-size: 56px;
+  margin-bottom: 20px;
+  font-family: "RoxboroughCF", serif;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.2;
+  color: #f9f8f3;
+  text-decoration: underline;
+  text-decoration-color: #f9f8f3;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 10px;
+}
+
+/* --------- CONTENT 9 / 10 / 11 / 14 (REGROUPÉS) --------- */
+
+.content-9,
+.content-10,
+.content-11,
+.content-14 {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: center; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  gap: 40px; /* Ajoute de l'espace entre les éléments */
+  width: 100%;
+  margin-top: 150px;
+  flex-direction: column; /* Dispose les éléments en colonne */
+}
+
+.text-content-9 h2,
+.text-content-10 h2,
+.text-content-11 h2 {
+  font-size: 56px;
+  margin-bottom: 20px;
+  font-family: "RoxboroughCF", serif;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.2;
+  color: #1c1c1c;
+  text-decoration: underline;
+  text-decoration-color: #1c1c1c;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 10px;
+}
+
+.empathy-map {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: center; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  text-align: left;
+  width: 100%;
+  flex-direction: column; /* Dispose les éléments en colonne */
+  color: #f9f8f3;
+  gap: 40px; /* Ajoute un espace entre les éléments */
+}
+
+.empathy-map p {
+  font-family: "RobertLight", sans-serif;
+  font-weight: 200;
+  line-height: 1.2;
+  letter-spacing: -0.05em;
+}
+
+.map-1,
+.map-2 {
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.think {
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.feel {
+  background-color: #008573;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.say {
+  background-color: #7e5928;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.do {
+  background-color: #ca8770;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+/* --------- IMAGE CONTAINERS 10 / 11 / 12 (REGROUPÉS) --------- */
+
+.image-container-10,
+.image-container-11,
+.image-container-12 {
+  flex: 1; /* Permet à l'image de prendre l'espace disponible */
+  width: 100%; /* Limite la largeur maximale */
+  display: flex; /* Utilise flex pour centrer l'image si nécessaire */
+  justify-content: center; /* Centre l'image horizontalement */
+  align-items: center; /* Centre l'image verticalement */
+  margin-bottom: 100px;
+}
+
+.project-image-10 {
+  width: 100%;
+  height: 650px;
+  object-fit: cover; /* Ajuste l'image pour couvrir le conteneur */
+}
+
+.elements {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: space-between; /* Place les éléments aux extrémités */
+  text-align: left;
+  width: 100%;
+  padding: 0 5%; /* Ajoute un peu de padding horizontal */
+  flex-direction: row; /* Dispose les éléments en colonne */
+}
+
+.E1 {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: center; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  text-align: left;
+  width: 700px;
+}
+
+.E2 {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: center; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  text-align: left;
+  width: 900px;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.Typo {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: center; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  text-align: left;
+  width: 650px;
+}
+
+.Color {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: center; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  text-align: left;
+  width: 750px;
+  height: 500px;
+}
+
+.UI-elements {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: center; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  text-align: left;
+  width: 750px;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* --------- CONTENT 11 --------- */
+
+.project-image-11 {
+  width: 80%;
+  height: auto;
+  object-fit: cover; /* Ajuste l'image pour couvrir le conteneur */
+}
+
+/* --------- CONTENT 12 --------- */
+
+.content-12 {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: center; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  gap: 40px; /* Ajoute de l'espace entre les éléments */
+  width: 100%;
+  margin-top: 50px;
+  flex-direction: column; /* Dispose les éléments en colonne */
+  background-color: #1c1c1c;
+}
+
+.text-content-12 h2 {
+  font-size: 56px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-family: "RoxboroughCF", serif;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.2;
+  color: #f9f8f3;
+  text-decoration: underline;
+  text-decoration-color: #f9f8f3;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 10px;
+}
+
+.project-image-12 {
+  width: 80%;
+  height: auto;
+  object-fit: cover; /* Ajuste l'image pour couvrir le conteneur */
+}
+
+/* --------- DESIGN PROTOTYPE / WIREFRAMES --------- */
+
+.design-protype {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: center; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  text-align: left;
+  width: 100%;
+  padding: 20px 5%; /* Ajoute un peu de padding horizontal */
+  flex-direction: column; /* Dispose les éléments en colonne */
+  background-color: #008573;
+}
+
+.design-protype h2 {
+  font-size: 56px;
+  font-family: "RoxboroughCF", serif;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.2;
+  color: #f9f8f3;
+}
+
+.low-wireframe p {
+  font-family: "RobertLight", sans-serif;
+  font-weight: 200;
+  line-height: 1.2;
+  letter-spacing: -0.05em;
+  margin-bottom: 10px; /* Espace entre le texte et la liste */
+  font-size: 16px;
+  width: 800px;
+  padding: 100px 5%;
+}
+
+/* IMAGE CONTAINER 13 / 13-1 / 13-2 (REGROUPÉS) */
+
+.image-container-13,
+.image-container-13-1,
+.image-container-13-2 {
+  flex: 1; /* Permet à l'image de prendre l'espace disponible */
+  width: 100%; /* Limite la largeur maximale */
+  display: flex; /* Utilise flex pour centrer l'image si nécessaire */
+  justify-content: flex-start; /* Centre l'image horizontalement */
+  align-items: flex-start; /* Centre l'image verticalement */
+  margin-bottom: 100px;
+  padding: 0 5%; /* Ajoute un peu de padding horizontal */
+  flex-direction: column;
+}
+
+.image-container-13 h2 {
+  font-size: 42px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-family: "ReviewMedium", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.2;
+  color: #1c1c1c;
+}
+
+.project-image-13 {
+  width: 650px;
+  height: auto;
+  object-fit: cover; /* Ajuste l'image pour couvrir le conteneur */
+}
+
+.w1 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+  font-family: "RobertLight", sans-serif;
+  font-weight: 200;
+  line-height: 1.2;
+  letter-spacing: -0.05em;
+  margin-bottom: 10px; /* Espace entre le texte et la liste */
+  font-size: 16px;
+}
+
+.image-container-13-1 h2,
+.image-container-13-2 h2 {
+  font-size: 42px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: "ReviewMedium", sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #1c1c1c;
+}
+
+.w2,
+.w3 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.low-fidelity,
+.high-fidelity {
+  width: 90%;
+  display: flex;
+}
+
+/* --------- CONTENT 14 --------- */
+
+.text-content-14 h2 {
+  font-size: 56px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-family: "RoxboroughCF", serif;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.2;
+  color: #1c1c1c;
+  text-decoration: underline;
+  text-decoration-color: #1c1c1c;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 10px;
+}
+
+.image-container-14 {
+  flex: 1; /* Permet à l'image de prendre l'espace disponible */
+  width: 100%; /* Limite la largeur maximale */
+  display: flex; /* Utilise flex pour centrer l'image si nécessaire */
+  justify-content: space-between; /* Centre l'image horizontalement */
+  align-items: center; /* Centre l'image verticalement */
+  margin-bottom: 100px;
+  flex-direction: row;
+  padding: 100px 5%; /* Ajoute un peu de padding horizontal */
+  background-color: #1c1c1c;
+}
+
+.header-14 {
+  font-family: "RobertLight", sans-serif;
+  font-weight: 200;
+  line-height: 1.2;
+  letter-spacing: -0.05em;
+  font-style: italic;
+  color: #f9f8f3;
+  max-width: 350px;
+  font-size: 36px;
+  padding: 120px;
+}
+
+.image-14 {
+  font-family: "ReviewMedium", sans-serif;
+  line-height: 1.2;
+  color: #f9f8f3;
+  font-size: 28px;
+}
+
+.On-boarding {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+}
+
+/* --------- CONTENT 15 --------- */
+
+.content-15 {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: center; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  text-align: center;
+  gap: 40px; /* Ajoute de l'espace entre les éléments */
+  width: 100%;
+  margin-top: 100px;
+  flex-direction: column; /* Dispose les éléments en colonne */
+}
+
+.text-content-15 h2 {
+  font-size: 48px;
+  font-family: "ReviewMedium", serif;
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+.text-content-15 img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover; /* Ajuste l'image pour couvrir le conteneur */
+  padding-bottom: 50px;
+}
+
+/* --------- CONTENT 16 --------- */
+
+.content-16 {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: space-between; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  text-align: center;
+  width: 100%;
+  margin-top: 100px;
+  flex-direction: row; /* Dispose les éléments en colonne */
+  padding: 100px 5%; /* Ajoute un peu de padding horizontal */
+  color: #f9f8f3;
+  background-color: #1c1c1c;
+}
+
+.text-content-16 {
+  flex: 1; /* Permet au texte de prendre l'espace disponible */
+  width: 50%; /* Limite la largeur maximale */
+  text-align: left; /* Aligne le texte à gauche */
+}
+
+.text-content-16 h2 {
+  font-size: 48px;
+  font-family: "ReviewMedium", sans-serif;
+  margin-bottom: 20px;
+}
+
+.text-content-16 p {
+  font-family: "RobertLight", sans-serif;
+  font-weight: 200;
+  line-height: 1.2;
+  letter-spacing: -0.05em;
+  margin-bottom: 10px; /* Espace entre le texte et la liste */
+  font-size: 16px;
+}
+
+.image-container-16 {
+  flex: 1; /* Permet à l'image de prendre l'espace disponible */
+  width: 50%; /* Limite la largeur maximale */
+  height: auto;
+  object-fit: cover; /* Ajuste l'image pour couvrir le conteneur */
+}
+
+.project-image-16 {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover; /* Ajuste l'image pour couvrir le conteneur */
+}
+
+/* --------- CONTENT 17 --------- */
+
+.content-17 {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: center; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  text-align: center;
+  gap: 40px; /* Ajoute de l'espace entre les éléments */
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  flex-direction: row; /* Dispose les éléments en colonne */
+  background-image: url("https://res.cloudinary.com/da9k32mdb/image/upload/v1747440933/Fond-2.png");
+  background-size: cover; /* Couvre tout le conteneur */
+  background-position: center; /* Centre l'image de fond */
+  background-repeat: no-repeat; /* Évite la répétition de l'image */
+  padding: 0 5%; /* Ajoute un peu de padding horizontal */
+}
+
+.text-content-17 {
+  flex: 1; /* Permet au texte de prendre l'espace disponible */
+  width: 50%; /* Limite la largeur maximale */
+  text-align: left; /* Aligne le texte à gauche */
+  margin-bottom: 250px;
+}
+
+.text-content-17 h2 {
+  font-size: 48px;
+  font-family: "ReviewMedium", sans-serif;
+  margin-bottom: 20px;
+}
+
+.text-content-17 p {
+  font-family: "RobertLight", sans-serif;
+  font-weight: 200;
+  line-height: 1.2;
+  letter-spacing: -0.05em;
+  margin-bottom: 10px; /* Espace entre le texte et la liste */
+  font-size: 16px;
+}
+
+.image-container-17 {
+  flex: 1; /* Permet à l'image de prendre l'espace disponible */
+  width: 50%; /* Limite la largeur maximale */
+  height: auto;
+  object-fit: cover; /* Ajuste l'image pour couvrir le conteneur */
+}
+
+.project-image-17 {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover; /* Ajuste l'image pour couvrir le conteneur */
+}
+
+/* --------- CONTENT 18 --------- */
+
+.content-18 {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: center; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  text-align: center;
+  gap: 40px; /* Ajoute de l'espace entre les éléments */
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  background-image: url("https://res.cloudinary.com/da9k32mdb/image/upload/v1747438738/bg2.jpg");
+  background-size: cover; /* Couvre tout le conteneur */
+  background-position: center; /* Centre l'image de fond */
+  background-repeat: no-repeat; /* Évite la répétition de l'image */
+  color: #f9f8f3;
+  position: relative;
+}
+
+.content-18::after {
+  content: "";
+  position: absolute; /* Positionne l'overlay par rapport à .content-8 */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(3, 3, 3, 0.5); /* Couche sombre */
+  opacity: 1; /* Ajuste l'opacité de l'overlay */
+  z-index: 1; /* Place l'overlay derrière le contenu de .content-8 */
+}
+
+.content-18 > * {
+  position: relative; /* Assure que le contenu reste au-dessus de l'overlay */
+  z-index: 2; /* Place le contenu au-dessus de l'overlay */
+}
+
+.fastlouvre {
+  width: 100%;
+  flex-direction: column;
+  padding: 100px 5%; /* Ajoute un peu de padding horizontal */
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: center; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  text-align: left;
+}
+
+.fastlouvre p {
+  font-family: "RobertLight", sans-serif;
+  font-weight: 200;
+  line-height: 1.2;
+  letter-spacing: -0.05em;
+  margin-bottom: 10px; /* Espace entre le texte et la liste */
+  font-size: 16px;
+}
+
+/* fastlouvre-1 & fastlouvre-2 (REGROUPÉS) */
+
+.fastlouvre-1,
+.fastlouvre-2 {
+  width: 100%;
+  flex-direction: row;
+  padding: 50px 5%; /* Ajoute un peu de padding horizontal */
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: center; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  text-align: left;
+  gap: 40px; /* Ajoute de l'espace entre les éléments */
+}
+
+.project-image-18 {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  object-fit: cover; /* Ajuste l'image pour couvrir le conteneur */
+}
+
+/* --------- CONTENT 19 --------- */
+
+.content-19 {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: center; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  text-align: center;
+  gap: 40px; /* Ajoute de l'espace entre les éléments */
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 0 10%; /* Ajoute un peu de padding horizontal */
+  flex-direction: column; /* Dispose les éléments en colonne */
+}
+
+.text-content-19 h2,
+.text-content-20 h2,
+.text-content-21 h2 {
+  font-size: 48px;
+  font-family: "ReviewMedium", sans-serif;
+  margin-bottom: 20px;
+}
+
+.text-content-19 p,
+.text-content-20 p,
+.text-content-21 p,
+.text-content-22 p {
+  font-family: "RobertLight", sans-serif;
+  font-weight: 200;
+  line-height: 1.2;
+  letter-spacing: -0.05em;
+  margin-bottom: 10px; /* Espace entre le texte et la liste */
+  font-size: 16px;
+}
+
+/* image-container-19 img & image-container-21 img (REGROUPÉS) */
+
+.image-container-19 img,
+.image-container-21 img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  object-fit: cover; /* Ajuste l'image pour couvrir le conteneur */
+  padding-bottom: 50px;
+}
+
+/* --------- CONTENT 20 --------- */
+
+.content-20 {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: center; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  text-align: center;
+  gap: 40px; /* Ajoute de l'espace entre les éléments */
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 150px 5%; /* Ajoute un peu de padding horizontal */
+  flex-direction: row; /* Dispose les éléments en colonne */
+  background-color: #1c1c1c;
+  color: #f9f8f3;
+}
+
+.text-content-20 {
+  flex: 1; /* Permet au texte de prendre l'espace disponible */
+  width: 50%; /* Limite la largeur maximale */
+  text-align: left; /* Aligne le texte à gauche */
+}
+
+.image-container-20 {
+  width: 50%;
+}
+
+.project-image-20 {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover; /* Ajuste l'image pour couvrir le conteneur */
+}
+
+/* --------- CONTENT 21 --------- */
+
+.content-21 {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: center; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  text-align: center;
+  gap: 40px; /* Ajoute de l'espace entre les éléments */
+  width: 100%;
+  margin-top: 100px;
+  padding: 0 10%; /* Ajoute un peu de padding horizontal */
+  flex-direction: column; /* Dispose les éléments en colonne */
+}
+
+/* --------- CONTENT 22 --------- */
+
+.content-22 {
+  display: flex; /* Utilise flexbox pour aligner les enfants horizontalement */
+  justify-content: center; /* Place les éléments aux extrémités */
+  align-items: center; /* Aligne les éléments en haut */
+  text-align: center;
+  gap: 40px; /* Ajoute de l'espace entre les éléments */
+  width: 100%;
+  margin-bottom: 100px;
+  padding: 150px 5%; /* Ajoute un peu de padding horizontal */
+  flex-direction: row; /* Dispose les éléments en colonne */
+}
+
+.text-content-22 {
+  flex: 1; /* Permet au texte de prendre l'espace disponible */
+  width: 50%; /* Limite la largeur maximale */
+  text-align: center; /* Aligne le texte à gauche */
+}
+
+.text-content-22 h2 {
+  font-size: 72px;
+  font-family: "RoxboroughCF", serif;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.2;
+  color: #1c1c1c;
+  text-decoration: underline;
+  text-decoration-color: #1c1c1c;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 10px;
+  margin-bottom: 20px;
+}
+
+.text-content-22 iframe {
+  width: 100%;
+  max-width: 1500px;
+  height: 800px;
+  border: none; /* Enlève la bordure par défaut */
+  border-radius: 12px; /* Ajoute un léger arrondi aux coins */
+}
+
+.image-container-22 {
+  width: 50%;
+}
+
+.project-image-22 {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover; /* Ajuste l'image pour couvrir le conteneur */
+}
+
+/* Footer Copyright */
+.footer {
+  margin-top: 20px;
+  font-size: 14px;
+  padding-top: 10px;
+  padding: 20px 60px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center; /* Ensures spacing between text & button */
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+/* Back-to-Top Button */
+.back-to-top {
+  position: absolute;
+  right: 30px; /* Position it on the right side of the footer */
+  bottom: 10px;
+}
+
+.back-to-top a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  cursor: pointer;
+  gap: 5px; /* Space between icon and text */
+  text-decoration: none;
+}
+
+/* Icon */
+.back-to-top svg {
+  width: 24px;
+  height: 24px;
+  fill: black; /* Default color */
+  transition: fill 0.3s ease-in-out;
+}
+
+/* Text */
+.back-to-top-text {
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.back-to-top:hover svg {
+  fill: #666; /* Change icon color on hover */
+}
+
+.back-to-top:hover .back-to-top-text {
+  color: #666; /* Change text color on hover */
+}
+/* Base Styles for Links */
+p a {
+  position: relative;
+  text-decoration: none;
+  color: black; /* Default text color */
+  font-weight: bold;
+  transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+/* Underline Effect */
+p a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Position the underline below text */
+  width: 100%;
+  height: 2px; /* Thickness of the underline */
+  background-color: black; /* Color of the underline */
+  transform: scaleX(0); /* Start with no width */
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Hover Effect - Underline Appears */
+p a:hover::after {
+  transform: scaleX(1); /* Expand the underline */
+}
+
+/* Hover Effect - Change Text Color */
+p a:hover {
+  color: #666; /* Change text color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  html {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: auto;
+    cursor: pointer;
+  }
+  
+  /* ===== HEADER ===== */
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+.header-text h1 {
+  font-size: 72px;
+  font-weight: bold;
+  font-family: "RobertLight", sans-serif;
+  white-space: nowrap;
+
+}
+
+  .custom-title {
+    font-weight: 200;
+    font-size: 36px;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: var(--color-text);
+    font-family: "ReviewMedium", serif;
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .custom-font {
+    font-size: 42px;
+    line-height: 1.2;
+    font-family: "RoxboroughCF", serif;
+    font-style: italic;
+  }
+  .text-content h2,
+  .text-content-2 h2,
+  .content-3 h2,
+  .text-content-3 h2,
+  .text-content-4 h2,
+  .text-content-5 h2,
+  .text-content-6 h2,
+  .pain-point-content h2,
+  .text-content-left h2,
+  .text-content-8 h2,
+  .text-content-9 h2,
+  .text-content-10 h2,
+  .text-content-11 h2,
+  .text-content-12 h2,
+  .text-content-13 h2,
+  .text-content-14 h2,
+  .text-content-16 h2,
+  .text-content-17 h2,
+  .text-content-17 h2,
+  .text-content-19 h2,
+  .text-content-20 h2,
+  .text-content-21 h2,
+  .text-content-22 h2 {
+    font-size: 36px;
+    line-height: 1.2;
+    margin: 0;
+    padding: 20px 0;
+  }
+  .text-content-15 h2 {
+    font-family: "ReviewMedium", serif;
+    font-size: 32px;
+    line-height: 1.2;
+    margin: 0;
+    padding: 20px 0;
+  }
+  .text-content-15 .custom-font {
+    font-size: 32px;
+  }
+  .text-content p,
+  .text-content-2 p,
+  .text-content-4 p,
+  .text-content-5 p,
+  .text-content-6 p,
+  .pain-point-content p,
+  .text-content-left p,
+  .text-content-8 p,
+  .text-content-9 p,
+  .text-content-10 p,
+  .text-content-11 p,
+  .text-content-12 p,
+  .text-content-13 p,
+  .text-content-14 p,
+  .text-content-15 p,
+  .text-content-16 p,
+  .text-content-17 p,
+  .text-content-19 p,
+  .text-content-21 p,
+  .text-content-22 p,
+  .w1 p,
+  .w2 p {
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin: 20px;
+    max-width: 400px;
+    width: 100%;
+    text-align: left;
+    font-family: "RobertLight", sans-serif;
+  }
+  .text-content-3 p {
+    font-family: "RobertBold", sans-serif;
+  }
+  /* === MAIN STRUCTURE === */
+  .main-content,
+  .content-1,
+  .content-2,
+  .content-3,
+  .content-4,
+  .content-5,
+  .content-6,
+  .content-7,
+  .content-8,
+  .content-9,
+  .content-10,
+  .content-11,
+  .content-12,
+  .content-13,
+  .content-14,
+  .content-15,
+  .content-16,
+  .content-17,
+  .content-18,
+  .content-19,
+  .content-20,
+  .content-21,
+  .content-22 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    padding: 20px 0;
+    margin: 20px 0;
+  }
+
+  /* ===== IMAGES ===== */
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .image-container img,
+  .image-container-4 img,
+  .image-container-7 img,
+  .image-container-8 img,
+  .image-container-10 img,
+  .image-container-13 img,
+  .image-container-13-1 img,
+  .image-container-13-2 img,
+  .image-container-14 img,
+  .image-container-19 img,
+  .image-container-21 img,
+  .content-18 img {
+    max-width: 600px;
+    padding: 0 20px;
+  }
+  .header-image {
+    display: none;
+  }
+
+  .text-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-start;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .text-content-3 {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    justify-content: space-between;
+    color: var(--color-light);
+    width: 100%;
+    max-width: 400px;
+    padding-left: 80px;
+  }
+
+  .text-content-5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .image-container-5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding: 0 20px;
+  }
+  .project-image-5 {
+    max-width: 650px;
+    width: 100%;
+    height: auto;
+  }
+
+  .info-5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    justify-content: center;
+  }
+  .info-5 h3 {
+    font-size: 20px;
+    text-align: center;
+    font-family: "ReviewMedium", serif;
+  }
+  .info-5 p {
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    margin: 20px;
+    max-width: 400px;
+    width: 100%;
+    text-align: left;
+    font-family: "RobertLight", sans-serif;
+  }
+
+  .image-container-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding: 0 20px;
+  }
+  .image-container-6 img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+  }
+
+  .pain-point-content {
+    flex-direction: column;
+  }
+  .pain-point-content h2 {
+    font-size: 36px;
+  }
+  .pain-point {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .image-container-7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding: 0 20px;
+  }
+  .image-container-7 img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+  }
+  .content-left {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  .text-content-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .text-content-left h2 {
+    font-size: 36px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .content-right {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  .text-content-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .text-right {
+    width: 100%;
+    max-width: 400px;
+    padding: 0;
+  }
+  .text-content-right h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+  .text-content-right p {
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    margin: 20px;
+    max-width: 400px;
+    width: 100%;
+    text-align: left;
+    font-family: "RobertLight", sans-serif;
+  }
+
+  .image-container-8 img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+  .content-9 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    margin-top: 50px;
+  }
+
+  .map-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+  }
+  .map-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+  }
+  .content-10 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    margin-top: 50px;
+  }
+
+  .image-container-10 img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+  }
+  .elements {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+  .elements img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 20px 0;
+  }
+  .content-11 img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+  }
+  .content-12 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    margin-top: 50px;
+  }
+  .text-content-12 h2 {
+    font-size: 36px;
+    text-align: center;
+  }
+  .content-12 img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    padding-left: 20px;
+  }
+  .design-protype h2 {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .image-container-13 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding: 0 20px;
+  }
+  .image-container-13 h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .w1,
+  .w2 {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .w1 img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    margin: 20px 0;
+  }
+
+  .image-container-13-1,
+  .image-container-13-2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding: 0 20px;
+  }
+  .image-container-13-1 img,
+  .image-container-13-2 img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+  }
+  .image-container-13-1 h2,
+  .image-container-13-2 h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .image-container-14 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px;
+  }
+  .header-14 {
+    font-size: 32px;
+  }
+
+  .text-content-16,
+  .text-content-17,
+  .text-content-20 {
+    width: 100%;
+    text-align: center;
+    max-width: 450px;
+    padding: 20px 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .text-content-16 p,
+  .text-content-17 p,
+  .text-content-20 p {
+    text-align: left;
+    font-size: 16px;
+  }
+
+  .project-image-16 {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover; /* Ajuste l'image pour couvrir le conteneur */
+  }
+  .content-17 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    margin-top: 50px;
+    padding: 0 20px;
+    background-image: none;
+  }
+
+  .fastlouvre-1 {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .fastlouvre-2 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .content-18 img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+  }
+  .content-19 {
+    display: flex;
+    margin-top: 50px;
+  }
+
+  .text-content-22 {
+    width: 100%;
+    text-align: center;
+  }
+}
