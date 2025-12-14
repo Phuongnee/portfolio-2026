@@ -58,7 +58,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/* DEBUG: détecte les éléments qui dépassent */
+/* * {
+  outline: 1px solid red !important;
+} */
 body {
   display: flex;
   justify-content: center;
@@ -1616,6 +1619,7 @@ p a:hover {
   .content-8,
   .content-9,
   .content-10,
+  .content-10,
   .content-11,
   .content-12,
   .content-13,
@@ -1636,7 +1640,31 @@ p a:hover {
     padding: 20px 0;
     margin: 20px 0;
   }
-
+    /* ===== E1 & E2 ===== */
+    .E1,
+    .E2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 100%;
+      gap: 20px;
+      padding: 20px 16px;
+      margin: 20px 0;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+    
+    /* Si E1/E2 contiennent des images ou éléments avec width fixe */
+    .E1 img,
+    .E2 img,
+    .E1 > *,
+    .E2 > * {
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto;
+    }
+    
   /* ===== IMAGES ===== */
   img {
     width: 100%;
@@ -2027,4 +2055,9 @@ p a:hover {
     width: 100%;
     text-align: center;
   }
+  .text-content-22 iframe {
+    width: 390px;
+    height: 800px;
+  }
 }
+
