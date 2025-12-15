@@ -197,8 +197,37 @@ if (portfolioSection) {
 const track = document.querySelector(".carousel-track");
 
 if (track && window.innerWidth > 768) {
-  track.innerHTML += track.innerHTML; // duplicate only on desktop
+  track.innerHTML += track.innerHTML; // duplicate UNIQUEMENT sur desktop
 }
+// Empêcher la duplication si on resize la fenêtre
+let isTrackDuplicated = false;
+
+function handleCarouselResize() {
+  if (window.innerWidth > 768 && !isTrackDuplicated) {
+    // Desktop: dupliquer le contenu
+    if (track) {
+      const originalCards = Array.from(track.children);
+      originalCards.forEach(card => {
+        track.appendChild(card.cloneNode(true));
+      });
+      isTrackDuplicated = true;
+    }
+  } else if (window.innerWidth <= 768 && isTrackDuplicated) {
+    // Mobile: retirer les duplicatas
+    if (track) {
+      const cards = Array.from(track.children);
+      const half = Math.floor(cards.length / 2);
+      cards.slice(half).forEach(card => card.remove());
+      isTrackDuplicated = false;
+    }
+  }
+}
+
+// Appel initial
+handleCarouselResize();
+
+// Écouter le resize
+window.addEventListener('resize', handleCarouselResize);
 
 // === MENU ACTIF (page courante) ===
 function highlightActiveLink() {
