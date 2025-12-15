@@ -665,7 +665,6 @@ p a:hover {
   }
   .text-section {
     width: 100%;
-    max-width: 400px;
     padding: 20px 0px;
 
   }
@@ -803,7 +802,7 @@ p a:hover {
   .high-fidelity-mockups {
     margin: 0;
     padding: 20px 0;
-    max-width: 430px;
+    max-width: 450px;
   }
 
   .problem-statement p {
@@ -855,3 +854,4 @@ p a:hover {
     justify-content: center;
     flex-direction: column;
   }
+  
