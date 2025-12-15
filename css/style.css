@@ -117,6 +117,9 @@ html[data-theme="dark"] {
 .mobile-menu__list a, .menu__link-span, .resume-text a {
   color: var(--color-text) !important;
 }
+.project-card.coming-soon .title-subtitle::after {
+  color: var(--color-text) !important;
+}
 
 
 html.no-scroll,
@@ -745,14 +748,28 @@ html[data-theme="dark"] .theme-toggle__thumb {
 
   /* adjust text size for mobile */
   .project-card p {
-    font-size: 1rem;
+    font-size: 16px;
   }
   .title-subtitle {
     flex-direction: column;
     gap: 5px;
+    justify-content: center;
+    align-items: center;
   }
   .project-card .sub-title {
-    font-size: 0.9rem;
+    font-size: 16px;
+    min-width: 150px;
+    text-align: center;
+  }
+  .project-card:hover .sub-title::after {
+    font-size: 16px;
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    left: 50%; 
+    transform: translateX(-50%);
   }
   .bloquereloj {
     position: static !important; /* remove absolute positioning */
@@ -766,4 +783,5 @@ html[data-theme="dark"] .theme-toggle__thumb {
   .resume-text {
     display: none;
   }
+
 }
