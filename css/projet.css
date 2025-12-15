@@ -504,3 +504,15 @@ html[data-theme="dark"] .theme-toggle__thumb {
 .menu__link-span {
   color: var(--color-text) !important;
 }
+.bottom-preview.active {
+  bottom: 80px;
+}
+
+.bottom-preview img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  display: flex;
+  object-fit: cover;
+  border-radius: 2px;
+}
