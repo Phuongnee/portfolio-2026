@@ -625,9 +625,50 @@ html[data-theme="dark"] .theme-toggle__thumb {
   position: absolute;
   left: 0;
   top: 0;
-  color: #000; /* or any color you like */
+  color: var(--color-dark);
   opacity: 1;
 }
+/* Coming Soon effect pour projets non terminés */
+.project-card.coming-soon .title-subtitle {
+  position: relative;
+  cursor: not-allowed;
+}
+
+.project-card.coming-soon .title-subtitle::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+/* Plus de spécificité pour écraser "View Project" */
+.project-card.coming-soon:hover .title-subtitle::after  {
+  content: "Coming Soon";
+  color: var(--color-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "RobertLight", serif;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
+}
+
+/* Cache le contenu de title-subtitle au survol */
+.project-card.coming-soon:hover .title-subtitle p,
+.project-card.coming-soon:hover .title-subtitle .sub-title {
+  opacity: 0;
+}
+
+
+/*Masquer "View Project" pour les coming-soon */
+.project-card.coming-soon:hover .sub-title::after {
+  content: "" !important;
+  display: none !important;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
