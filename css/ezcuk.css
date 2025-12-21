@@ -180,6 +180,7 @@ iframe {
        =========================== */
 
 .section-header {
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -487,6 +488,7 @@ iframe {
 .survey-methodology {
   width: 100%;
   max-width: 1600px;
+  align-items: flex-start;
 }
 .survey-statistics .text,
 .interview-insights .text {
